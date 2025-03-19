@@ -22,9 +22,6 @@ canvas {
   color: #9d0808;
   border: solid 1px #000000;
   background-color: #D3D3D3;
-  
-  
-/*   padding-bottom: 20px; */
   margin: 50px;
   padding: 25px;
 }
@@ -35,11 +32,16 @@ h1{
 }
 
 #about:hover, #skills:hover {
-  background-color: #8bad9b;
+  /* background-color: #8bad9b; */
+  background-image: url("images/sparkle.gif");
   color: #ffffff;
 }
-#background{
+#background {
     /* background-image: image("images/sparkle.gif"); */
-    background-image: image("images/sparkle.gif");
+    background-image: url("images/sparkle.gif");
     background-size: cover;
+}
+
+#welcome {
+  
 }
