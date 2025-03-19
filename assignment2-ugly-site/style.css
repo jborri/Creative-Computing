@@ -17,13 +17,20 @@ canvas {
   color:red;
 }
 
+#about {
+  margin:50px;
+  padding: 25px;
+}
+
 #about, #skills {
   font-family: "Tektur";
-  color: #9d0808;
+  color: gold;
   border: solid 1px #000000;
-  background-color: #D3D3D3;
-  margin: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
   padding: 25px;
+  text-align: center;
+  background-image: url("images/sparkle2.gif");
 }
 
 h1{
@@ -33,7 +40,7 @@ h1{
 
 #about:hover, #skills:hover {
   /* background-color: #8bad9b; */
-  background-image: url("images/sparkle.gif");
+  background-image: url("images/void.gif");
   color: #ffffff;
 }
 #background {
