@@ -1,0 +1,30 @@
+/* this code will import and external font from google fonts
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+ html, body {
+   margin: 0;
+   padding: 0;
+  
+ }
+ body {
+   border: 1px solid black;
+   height: 99vh;
+   width: 99vw;
+   font-family: 'Roboto Mono';
+   font-size: 22px;
+ }
+ 
+ main {
+   width: 100%;
+   height: 100%;
+ }
+ 
+ 
+ .card {
+   border: 1px solid black;
+   padding: 10px 20px;
+   max-width: 80%;
+ }
+ 
+ 

@@ -1,0 +1,23 @@
+.card {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    color: white;
+    background-color: green;
+    text-align: center;
+  }
+  
+  .card a:hover {
+    color: cornflowerblue;
+  }
+  
+  .card a {
+    color: honeydew;
+    
+  }
+  
+  .pickle{
+    width: 20px;
+    height: 20px;
+  }
+  
