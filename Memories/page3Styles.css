@@ -1,0 +1,12 @@
+.card {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+  }
+  
+  .card img{
+    width:200px;
+    height:200px;
+  }
+  
+  
