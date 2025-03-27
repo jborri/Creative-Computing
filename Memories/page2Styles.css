@@ -1,9 +1,13 @@
+main{
+    background-color: black;
+}
+
 .card {
     position: absolute;
     bottom: 50px;
     right: 30px;
     color: white;
-    background-color: green;
+    background-color: black;
     text-align: center;
   }
   
@@ -12,7 +16,7 @@
   }
   
   .card a {
-    color: honeydew;
+    color:darkblue;
     
   }
   
