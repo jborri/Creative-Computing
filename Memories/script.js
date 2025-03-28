@@ -5,7 +5,7 @@ function play() {
   var audio = new Audio('A&W (Instrumental With Backing Vocals).mp3');
   audio.play();
   audio.loop = true;
-  audio.volume = 0.3;
+  audio.volume = 0.2;
 }
 function setCookie(c_name,value,exdays)
 {
@@ -51,8 +51,8 @@ function update()
     setCookie('timePlayed', song.currentTime);
     }
 }
-setInterval(update,1000);
-sessionStorage.setItem('timePlayed', song.currentTime);
+// setInterval(update,10);
+// sessionStorage.setItem('timePlayed', song.currentTime);
 // Print a message in the browser's dev tools console each time the page loads
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 // console.log("Hello 🌎");
