@@ -29,5 +29,13 @@
     top: 20%;
     left: 0%;
     z-index: 1;
+    border-radius: 10%;
+  }
+  .plant img:hover{
+    color: #111;
+    background: greenyellow, 0 0 0 0;
+    background: radial-gradient(circle, greenyellow 0%, transparent 70%);
+    /* box-shadow: 0 0  100px greenyellow; */
+    /* opacity: 0.5; */
   }
   
