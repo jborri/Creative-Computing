@@ -2,7 +2,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: white;
   }
 
   .card {
@@ -11,14 +11,14 @@ main {
     /* left: 350px; */
     text-align: center;
     align-items: center;
-    background-color:darkslategrey;
-    color: thistle;
+    background-color:white;
+    color: black;
   }
 
   .card a{
-    color:yellow
+    color:red
   }
 
   .card a:hover {
-    color: cornflowerblue;
+    color: darkred;
   }

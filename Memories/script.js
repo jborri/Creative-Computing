@@ -7,11 +7,12 @@ function play() {
   audio.loop = true;
   audio.volume = 0.2;
 }
+
 function setCookie(c_name,value,exdays)
 {
     var exdate=new Date();
     exdate.setDate(exdate.getDate() + exdays);
-    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()); + "; path=/"
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()); + "; path=/";
     document.cookie=c_name + "=" + c_value;
 }
 
@@ -51,6 +52,8 @@ function update()
     setCookie('timePlayed', song.currentTime);
     }
 }
+
+setInterval(update,10);
 // setInterval(update,10);
 // sessionStorage.setItem('timePlayed', song.currentTime);
 // Print a message in the browser's dev tools console each time the page loads
