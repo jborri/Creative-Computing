@@ -13,6 +13,6 @@ Now I'm confused and many questions are running through my head.. How did she kn
 She said, "can I read you your horoscope?" I had time to kill and my motto is do it for the plot so she sat down, pulled out a iPhone 14X Plus Pro Max and asked me for my birth info which she entered into some website calculator.
 She pulled out a piece of paper which had some sort of template. and told me my moon sign, Scorpio. My rising sign, Cancer, and my Sun sign, Virgo. (She used vedic names, which I later discovered after I redid my chart). She told me a bunch of things but didn't once mention that I had been locked out and of what to do. But she got up and said, "These roses are like lead sinkers."
 I was left perplexed as she got up and disappeared into the crowd. I ended up having to wait a few days, a someone who later became my boyfriend at the time invited me to Marseille. When I arrive he hands me a book and said "this is the only Sylvia Plath book at the shop that was in English." The Book was Ariel.
-We had talked prior about poetry and I had told him that I just finished the Bell Jar.
+We had talked prior about poetry and I had told him that I just finished the Bell Jar. It wasn't until later that I discovered this book had a poem called "Tulips".
 
 ![Storyboard](Untitled_Artwork.png)
