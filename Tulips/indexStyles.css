@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .card {
+    position: absolute;
+    top: 25%;
+    /* left: 350px; */
+    text-align: center;
+    align-items: center;
+    background-color:white;
+    color: black;
+  }
+
+  .card a{
+    color:red
+  }
+
+  .card a:hover {
+    color: darkred;
+  }

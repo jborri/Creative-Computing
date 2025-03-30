@@ -1,0 +1,56 @@
+.card {
+  color: black;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card a {
+  color:darkred;
+  
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fadeIn 3s forwards;
+  opacity: 0;
+}
+
+.fade:nth-child(1) {
+  animation-delay: 2s;
+}
+
+.fade:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.fade:nth-child(3) {
+  animation-delay: 6s;
+}
+.fade:nth-child(4) {
+  animation-delay: 8s;
+}
+.fade:nth-child(5) {
+  animation-delay: 10s;
+}
+.fade:nth-child(6) {
+  animation-delay: 12s;
+}
+.fade:nth-child(7) {
+  animation-delay: 14s;
+}
+.fade:nth-child(8) {
+  animation-delay: 16s;
+}
+
+  
