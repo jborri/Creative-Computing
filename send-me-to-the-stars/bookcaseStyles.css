@@ -1,0 +1,58 @@
+html {
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1vw;
+  background-color:seashell;
+}
+
+.inside-page {
+  width: 100%;
+}
+
+.cover-page {
+  width: 100%;
+}
+
+#card {
+  display: flex;
+      width: 90%;
+      row-gap: 150px;
+      margin: auto;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+}
+.bookcase {
+  border-radius: var(--borderWidth);
+  background: seashell;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 10px;
+  scroll-snap-align: center;
+}
+.wholecase{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textbox{
+  padding: 10px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+area {
+ 
+
+  border:  1px solid black;
+}
