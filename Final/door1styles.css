@@ -66,3 +66,35 @@ h1 {
   margin: 40px;
  
 }
+#slideshow {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match the slideshow width */
+  height: 100%; /* Match the slideshow height */
+  pointer-events: none; /* Allow clicks to pass through to the slideshow */
+  z-index: 1;
+}
+
+.overlay img {
+  width: 800px; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Ensure the parent container is positioned relatively */
+.Nature {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
+#slideshow{
+  width: 800px;
+  height: 700px;
+}
