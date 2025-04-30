@@ -79,7 +79,7 @@ h1 {
   width: 100%; /* Match the slideshow width */
   height: 100%; /* Match the slideshow height */
   pointer-events: none; /* Allow clicks to pass through to the slideshow */
-  z-index: 1;
+  
 }
 
 .overlay img {
