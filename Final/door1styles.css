@@ -1,0 +1,68 @@
+main {
+  background-color: #f0f0f0;
+  width: 100em;
+  height: 100em;
+}
+
+#desktop {
+  /* background-color: #f0f0f0; */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.doorname {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px;
+
+  p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 0 60px 0;;
+  }
+
+}
+.doors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+}
+
+.door1 {
+  background-color: #f0f0f0;
+  width: 100px;
+  height: 200px;
+  border: 2px solid #333;
+  margin: 40px;
+
+}
+.door2 {
+  background-color: #f0f0f0;
+  width: 100px;
+  height: 200px;
+  border: 2px solid #333;
+  margin: 40px;
+
+}
+.door3 {
+  background-color: #f0f0f0;
+  width: 100px;
+  height: 200px;
+  border: 2px solid #333;
+  margin: 40px;
+ 
+}
