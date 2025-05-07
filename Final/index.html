@@ -7,31 +7,50 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <title>proteanpunk</title>
     <main>
+      <audio preload="auto" src="Gerudo Valley.mp3" loop="true" autobuffer pre>
+        Unsupported in Firefox
+        </audio>
       <div id="desktop">
-        <h1>Pick a door</h1>
-      </div>
-      <div class="doorname">
-        <p>Door 1</p>
-        <p>Door 2</p>
-        <p>Door 3</p>
-      </div>
-      <div class="doors">
-        <div class="door1">
-          <a href="door1.html">
-            <img src="door1.png" alt="Door 1" /></a>
-        </div>
-        <div class="door2">
-          <a href="door2.html">
-            <img src="door2.png" alt="Door 2" /></a>
-        </div>
-        <div class="door3">
-          <a href="door3.html">
-            <img src="door3.png" alt="Door 3" /></a>
-        </div>
-      </div>
+        <h1 id="start-button">start</h1>
       
+        <div id="start-menu" class="hidden">
+          <ul>
+            <li><a href="door1.html">Nature.exe</a></li>
+            <li><a href="door2.html">memes.exe</a></li>
+            <li><a href="door3.html">Me.exe</a></li>
+          </ul>
+        </div>
+
+        <div class="doorname"></div>
+        <div class="doors">
+          <div class="door1">
+            <a href="door1.html">
+              <img src="images/desktop/bulbasaur.gif" alt="Door 1" />
+            </a>
+          </div>
+          <div class="door2">
+            <a href="door2.html">
+              <img src="images/desktop/Wartortle.png" alt="Door 2" /></a>
+          </div>
+          <div class="door3">
+            <a href="door3.html">
+              <img src="images/desktop/Charizard.webp" alt="Door 3" /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Door 1 -->
+      <!-- <div id="door1-modal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close-button" id="close-door1">&times;</span>
+          <h2>Door 1 Content</h2>
+          <p>This is the content for Door 1.</p>
+        </div>
+      </div> -->
     </main>
-    <script src="script1.js"></script>
+    <!-- <script src="script1.js"></script> -->
+    <script src="menu.js"></script>
   </body>
 </html>
