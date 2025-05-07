@@ -104,3 +104,11 @@ function play() {
   }
   
   setInterval(update,10);
+  function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById('current-time').textContent = timeString;
+  }
+  
+  setInterval(updateTime, 1000); // Update every 1000 milliseconds (1 second)
+  updateTime(); // Initial call to display time immediately
