@@ -189,14 +189,14 @@ h1 {
 }
 
 .modal-content {
- background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 5000px;
-    text-align: center;
-    box-shadow: 16px -20px 5px 5px rgba(0, 0, 0, 0.2);
-    height: 80%;
-    margin-left: 240px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit the maximum width */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .close-button {
@@ -211,56 +211,48 @@ h1 {
   display: none;
 }
 
+/* Overlay styles */
+.overlay {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.overlay img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  pointer-events: none;
+}
+
+/* Slideshow styles */
+.Nature {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.Nature img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   main {
     background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
   }
-}
 
-#desktop2 {
-  /* background-color: #f0f0f0; */
-  /* font-family: Arial, sans-serif;
-  color: #333;
-  height: inherit; */
-}
-#slideshow {
- position: fixed;
-  top: 0;
-  left: 0;
-  width: 55%; /* Match the slideshow width */
-  height: 100%; /* Match the slideshow height */
-  pointer-events: none; /* Allow clicks to pass through to the slideshow */
-  z-index: 1;
-  margin-top: 250px;
-  margin-left: 250px;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 55%; /* Match the slideshow width */
-  height: 100%; /* Match the slideshow height */
-  pointer-events: none; /* Allow clicks to pass through to the slideshow */
-  z-index: 2;
-  margin-top: 0px;
-  margin-left: 250px;
+  .modal-content {
+    width: 90%; /* Adjust for smaller screens */
   }
-
-
-.overlay img {
-  width: 800px; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
-  object-fit: cover; /* Ensure the image covers the area */
 }
 
-/* Ensure the parent container is positioned relatively */
-.Nature {
-  position: relative;
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
-}
-#slideshow{
-  width: 800px;
-  height: 700px;
-}
