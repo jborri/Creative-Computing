@@ -5,6 +5,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <title>proteanpunk</title>
@@ -31,13 +36,13 @@
         <div class="doorname"></div>
         <div class="doors">
           <div class="door1">
-            <a href="door1.html" id="door1-link" >
-              <img src="images/desktop/bulbasaur.gif" alt="Door 1"id="door1-link" /><br/>
-              <a  href="door1.html" id="door1-img" >Nature.exe</a>
+            <a href="#" id="door1-link">
+              <img src="images/desktop/bulbasaur.gif" alt="Door 1" />
             </a>
+            <a href="#" id="nature-link">Nature.exe</a>
           </div>
           <div class="door2">
-            <a href="door2.html" id="door1-link">
+            <a href="door2.html" >
               <img src="images/desktop/Wartortle.png" alt="Door 2" /></a><br/>
               <a href="door2.html">memes.exe</a>
           </div>
@@ -50,20 +55,10 @@
       </div>
 
       <!-- Modal for Door 1 -->
-      <!-- <div id="door1-modal" class="hidden">
+      <div id="door1-modal" class="modal hidden">
         <div class="modal-content">
           <span class="close-button" id="close-door1">&times;</span>
-          <h2>Application: Nature</h2>
-          <p>blahblah.</p>
-        </div>
-      </div> -->
-      <div id="door1-modal" class="hidden">
-        <div class="modal-content">
-          <span class="close-button" id="close-door1">&times;</span>
-
-      <div id="desktop2">
-        
-        <h1>Nature</h1>
+        <h2>Nature</h2>
         <div class="slider">
           <div class="slider-container">
             <label for="speedSlider">Cycle Speed (ms): </label>
@@ -81,23 +76,14 @@
       <div class="Nature">
         <img id="slideshow" src="" alt="Slideshow Image" />
       </div>
-      <div class="slider">
-        <div class="slider-container">
-          <label for="speedSlider">Cycle Speed (ms): </label>
-          <input id="speedSlider" type="range" min="500" max="5000" step="500" value="1000" />
-          <span id="speedValue">1000</span> ms
+  
         </div>
-        <a href="index.html">
-          back
-        </a>
       </div>
-    </div>
-  </div>
       
     </main>
-    <script src="script1.js"></script>
+  
     </main>
-    <!-- <script src="script1.js"></script> -->
     <script src="menu.js"></script>
+<script src="script1.js"></script>
   </body>
 </html>

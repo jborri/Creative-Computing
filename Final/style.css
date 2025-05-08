@@ -174,14 +174,14 @@ h1 {
 }
 
 
-/* Modal styles (still working on this!!!! >.<; */
-door1-modal {
+/* Modal styles */
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,26 +189,27 @@ door1-modal {
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 75%;
-  text-align: center;
-  box-shadow: 18px -20px 6px 7px rgb(0 104 37 / 20%);
-
-  /* height: 20px; */
-  z-index: 20;
+ background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 5000px;
+    text-align: center;
+    box-shadow: 16px -20px 5px 5px rgba(0, 0, 0, 0.2);
+    height: 80%;
+    margin-left: 240px;
 }
 
-/* .close-button {
+.close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  /* top: 10px;
+  right: 10px; */
   font-size: 24px;
   cursor: pointer;
-  z-index: 100;
-  color: #fff;
-}  */
+}
+
+.hidden {
+  display: none;
+}
 
 @media (max-width: 768px) {
   main {
@@ -218,26 +219,32 @@ door1-modal {
 
 #desktop2 {
   /* background-color: #f0f0f0; */
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif;
   color: #333;
-  height: inherit;
+  height: inherit; */
 }
 #slideshow {
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
-  display: block;
-}
-
-.overlay {
-  position: absolute;
+ position: fixed;
   top: 0;
   left: 0;
   width: 55%; /* Match the slideshow width */
   height: 100%; /* Match the slideshow height */
   pointer-events: none; /* Allow clicks to pass through to the slideshow */
   z-index: 1;
-  margin-top: 350px;
-  margin-left: 20px;
+  margin-top: 250px;
+  margin-left: 250px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 55%; /* Match the slideshow width */
+  height: 100%; /* Match the slideshow height */
+  pointer-events: none; /* Allow clicks to pass through to the slideshow */
+  z-index: 2;
+  margin-top: 0px;
+  margin-left: 250px;
   }
 
 
