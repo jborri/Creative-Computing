@@ -1,7 +1,7 @@
 main {
   background-color: #f0f0f0;
   width: 100%;
-  height: 770px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-image: url(images/desktop/IMG_1822.jpg);
@@ -19,12 +19,14 @@ main {
   height: auto;
   padding: 0;
   margin: 0;
+  z-index: 0;
 
 }
 
 body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 h1 {
@@ -172,7 +174,7 @@ h1 {
 }
 
 /* Modal styles (still working on this!!!! >.<; */
-/* .modal {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -183,27 +185,64 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-} */
+}
 
-/* .modal-content {
+.modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 300px;
+  width: 50%;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
 }
 
-.close-button {
+/* .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
   cursor: pointer;
-} */
+  z-index: 100;
+  color: #fff;
+}  */
 
 @media (max-width: 768px) {
   main {
     background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
   }
+}
+
+
+#slideshow {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match the slideshow width */
+  height: 100%; /* Match the slideshow height */
+  pointer-events: none; /* Allow clicks to pass through to the slideshow */
+  z-index: 1;
+}
+
+.overlay img {
+  width: 800px; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Ensure the parent container is positioned relatively */
+.Nature {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
+#slideshow{
+  width: 800px;
+  height: 700px;
 }
