@@ -173,8 +173,9 @@ h1 {
   padding: 0; /* Remove unnecessary padding */
 }
 
+
 /* Modal styles (still working on this!!!! >.<; */
-.modal {
+door1-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -191,10 +192,12 @@ h1 {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 50%;
+  width: 75%;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
+  box-shadow: 18px -20px 6px 7px rgb(0 104 37 / 20%);
+
+  /* height: 20px; */
+  z-index: 20;
 }
 
 /* .close-button {
@@ -213,7 +216,12 @@ h1 {
   }
 }
 
-
+#desktop2 {
+  /* background-color: #f0f0f0; */
+  font-family: Arial, sans-serif;
+  color: #333;
+  height: inherit;
+}
 #slideshow {
   width: 100%; /* Adjust as needed */
   height: auto; /* Adjust as needed */
@@ -224,11 +232,14 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Match the slideshow width */
+  width: 55%; /* Match the slideshow width */
   height: 100%; /* Match the slideshow height */
   pointer-events: none; /* Allow clicks to pass through to the slideshow */
   z-index: 1;
-}
+  margin-top: 350px;
+  margin-left: 20px;
+  }
+
 
 .overlay img {
   width: 800px; /* Adjust as needed */

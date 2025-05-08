@@ -80,6 +80,8 @@ h1 {
   height: 100%; /* Match the slideshow height */
   pointer-events: none; /* Allow clicks to pass through to the slideshow */
   z-index: 1;
+  margin-top: 350px;
+  margin-left: 20px;
 }
 
 .overlay img {

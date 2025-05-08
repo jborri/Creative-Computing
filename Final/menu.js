@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const door1Link = document.getElementById("door1-link");
+  const door1Link = document.getElementById("door1-link", "door1-img");
   const door1Modal = document.getElementById("door1-modal");
   const closeDoor1 = document.getElementById("close-door1");
 
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     door1Modal.classList.add("hidden");
   });
  
+ 
 
   // Hide the modal when clicking outside the modal content
   window.addEventListener("click", (event) => {
@@ -47,11 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('errrrrorrrr')
   });
 
-  const door1Action = document.getElementById("door1-action");
+  // const door1Action = document.getElementById("door1-action");
 
-  door1Action.addEventListener("click", () => {
-    alert("You clicked the action button in Door 1!");
-  });
+  // door1Action.addEventListener("click", () => {
+  //   alert("You clicked the action button in Door 1!");
+  // });
 });
 
 
