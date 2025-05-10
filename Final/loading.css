@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+
+main {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://media1.tenor.com/m/pA3iQm28pU4AAAAC/481.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; /* Ensures the image scales with the window size????idkkkk!!!!! */
+  font-family: "Jersey 10";
+}
+
+#user {
+  /* background-color: #f0f0f0; */
+  width: auto;
+  height: auto;
+  margin: 0;
+  z-index: 0;
+  /* padding-top: 40%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  
+
+}
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+}
+
+label {
+  color: white;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  background-color:lime;
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  color: black;
+  
+}
+#bar{
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  color: black;
+  justify-content:center;
+  background-color: lime;
+  font-size: 24px;
+ 
+}
+
+#start-menu {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 200px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+}
+
+#start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#start-menu li {
+  margin: 5px 0;
+}
+
+#start-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* spacing for the start button not sure if this works lol*/
+#start-button {
+  margin: 0px 0; /* Reduce the top and bottom margin */
+  padding: 0; /* Remove unnecessary padding */
+}
+
+
+/* Login form styles */
+#login-form {
+  text-align: center;
+  
+  border-radius: 15px;
+  /* background-color: #ccc; */
+}
+
+#login-form input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  border-radius: 25px;
+  
+}
+
+#submit-button {
+  padding: 10px 20px;
+  background-color: lime;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#submit-button:hover {
+  background-color: forestgreen;
+}
+
+#icon{
+
+}
+
+#icon img{
+  width: 125px;
+  height: 240px;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+

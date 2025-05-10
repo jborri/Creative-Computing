@@ -111,3 +111,10 @@ function play() {
   
   setInterval(updateTime, 1000); // Update every 1000 milliseconds (1 second)
   updateTime(); // Initial call to display time immediately
+
+  //loading screeeen
+//   var loading_screen = document.querySelector(".loading");
+
+// window.addEventListener('load', function() {
+//     loading_screen.style.display = 'none';
+// })

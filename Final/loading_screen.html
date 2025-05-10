@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="loading.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <title>loading...</title>
+    
+    <main>
+      <audio preload="auto" src="Gerudo Valley.mp3" loop="true" autobuffer pre>
+        Unsupported in Firefox
+      </audio>
+      <div id="bar">
+        <!-- <h1 id="start-button">start</h1> -->
+        <span id="current-time"></span>
+      </div>
+      <div id="user">
+        <div id="icon">
+          <img src="https://cdn.pixabay.com/photo/2013/07/13/10/14/man-156836_640.png"/>
+        </div>
+          <div id="enter">
+            <form id="login-form">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required /><br /><br />
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required /><br /><br />
+             <button type="button" id="submit-button">Enter</button>
+           </form>
+          </div>
+      </div>
+      </div>
+    </main>
+    <script src="loading.js"></script>
+  </body>
+</html>
