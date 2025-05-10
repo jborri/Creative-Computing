@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   let currentIndex = 0;
-  const slideshowElement = document.getElementById("slideshow");
-  const speedSlider = document.getElementById("speedSlider");
-  const speedValue = document.getElementById("speedValue");
+  const slideshowElement = document.getElementById("slideshow3");
+  const speedSlider = document.getElementById("speedSlider3");
+  const speedValue = document.getElementById("speedValue3");
 
   let intervalId;
   let cycleSpeed = parseInt(speedSlider.value, 10);

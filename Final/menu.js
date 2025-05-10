@@ -21,30 +21,89 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Door 1 elements
   const door1Link = document.getElementById("door1-link");
   const natureLink = document.getElementById("nature-link");
   const door1Modal = document.getElementById("door1-modal");
   const closeDoor1 = document.getElementById("close-door1");
 
-  // Function to open the modal
-  const openModal = (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    door1Modal.classList.remove("hidden");
+  // Door 2 elements
+  const door2Link = document.getElementById("door2-link");
+  const memesLink = document.getElementById("memes-link");
+  const door2Modal = document.getElementById("door2-modal");
+  const closeDoor2 = document.getElementById("close-door2");
+
+  // Door 3 elements
+  const door3Link = document.getElementById("door3-link");
+  const meLink = document.getElementById("me-link");
+  const door3Modal = document.getElementById("door3-modal");
+  const closeDoor3 = document.getElementById("close-door3");
+
+  // Function to open a modal
+  const openModal = (modal) => {
+    modal.classList.remove("hidden");
   };
 
-  // Add event listeners to both the image and the link
-  door1Link.addEventListener("click", openModal);
-  natureLink.addEventListener("click", openModal);
+  // Function to close a modal
+  const closeModal = (modal) => {
+    modal.classList.add("hidden");
+  };
 
-  // Hide the modal when the close button is clicked
-  closeDoor1.addEventListener("click", () => {
-    door1Modal.classList.add("hidden");
+  // Door 1 event listeners
+  door1Link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(door1Modal);
   });
 
-  // Optional: Hide the modal when clicking outside the modal content
+  natureLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(door1Modal);
+  });
+
+  closeDoor1.addEventListener("click", () => {
+    closeModal(door1Modal);
+  });
+
+  // Door 2 event listeners
+  door2Link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(door2Modal);
+  });
+
+  memesLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(door2Modal);
+  });
+
+  closeDoor2.addEventListener("click", () => {
+    closeModal(door2Modal);
+  });
+
+  // Door 3 event listeners
+  door3Link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(door3Modal);
+  });
+
+  meLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(door3Modal);
+  });
+
+  closeDoor3.addEventListener("click", () => {
+    closeModal(door3Modal);
+  });
+
+  // Optional: Close modal when clicking outside the content
   window.addEventListener("click", (event) => {
     if (event.target === door1Modal) {
-      door1Modal.classList.add("hidden");
+      closeModal(door1Modal);
+    }
+    if (event.target === door2Modal) {
+      closeModal(door2Modal);
+    }
+    if (event.target === door3Modal) {
+      closeModal(door3Modal);
     }
   });
 });
