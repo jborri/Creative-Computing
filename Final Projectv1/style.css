@@ -252,6 +252,7 @@ h1 {
     border: 1px, solid, black;
     font-size: 12px;
     transform: rotate(2.3deg);
+    
 }
 
 /* Modal styles */
@@ -375,7 +376,7 @@ h1 {
 .modal-content {
     width: 90%; /* Adjust for smaller screens */
   }
-}
+
 #slideshow{
   width: 800px;
   height: 700px;
