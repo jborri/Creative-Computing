@@ -284,8 +284,8 @@ h1 {
   background-color: transparent;
   padding: 20px;
   border-radius: 8px;
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Limit the maximum width */
+  width: 100%; /* Adjust width as needed */
+  max-width: 700px; /* Limit the maximum width */
   text-align: center;
   /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
   position: relative;

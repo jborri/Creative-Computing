@@ -122,22 +122,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const lotusImage = document.getElementById("lotus");
   const lotusModal = document.getElementById("lotus-modal");
   const closeLotus = document.getElementById("close-lotus");
-  const lotusTrigger = document.getElementById("lotus"); // Assuming this is the trigger for the modal
 
-  // Open the modal
-  lotusTrigger.addEventListener("click", (event) => {
-    event.preventDefault();
+  // Open the modal when the lotus image is clicked
+  lotusImage.addEventListener("click", () => {
     lotusModal.classList.remove("hidden");
   });
 
-  // Close the modal
+  // Close the modal when the close button is clicked
   closeLotus.addEventListener("click", () => {
     lotusModal.classList.add("hidden");
   });
 
-  // Optional: Close the modal when clicking outside the content
+  // Optional: Close the modal when clicking outside the modal content
   window.addEventListener("click", (event) => {
     if (event.target === lotusModal) {
       lotusModal.classList.add("hidden");
@@ -153,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to update the animation duration
   const updateRotationSpeed = () => {
     const speed = rotationSpeedSlider.value;
-    speedValue1.textContent = speed;
+    speedValue.textContent = speed;
 
     // Update the animation duration for each image
     smallest.style.animationDuration = `${speed}ms`;
