@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const rotationSpeedSlider = document.getElementById("rotationSpeed");
-  const speedValue1 = document.getElementById("speedValue1");
+  const rotationSpeedSlider = document.getElementById("rotationSpeed1");
+  const speedValue = document.getElementById("speedValue1");
   const smallest = document.querySelector(".smallest");
   const largest = document.querySelector(".largest");
   const middle = document.querySelector(".middle");

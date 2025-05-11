@@ -59,6 +59,7 @@ h1 {
   background-color: rgb(70, 183, 228);
   font-size: 24px;
   background-image: url('images/desktop/bar.png');
+  align-items: center;
 }
 
 .doorname {
@@ -188,7 +189,7 @@ h1 {
   align-items: center;
   padding-left: 20px;
   background-image: url('images/desktop/button.png');
-  color: rgb(182, 169, 218);
+  color: rgb(255, 255, 255);
   height: 40px;
   width: 80px;
   background-color: transparent;
@@ -599,4 +600,13 @@ h1 {
 #rotationSpeed {
   width: 80%;
   margin: 10px auto;
+}
+#rotationSpeed1 {
+  width: 80%;
+  margin: 10px auto;
+}
+ .slider-container1 {
+  margin-top: 20px;
+  text-align: center;
+  z-index: 1000;
 }
