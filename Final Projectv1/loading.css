@@ -52,9 +52,9 @@ main {
   transition-duration: 5ms, 0.5;
 }
 
-#preloader img{
+/* #preloader img{
   ;
-}
+} */
 
 .loading {
     position: absolute;

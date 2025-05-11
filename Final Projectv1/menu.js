@@ -106,6 +106,66 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal(door3Modal);
     }
   });
+
+  const musicPlayer = document.getElementById("musicplayer");
+  const audio = document.getElementById("background-music");
+
+  musicPlayer.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play(); // Play the music
+      musicPlayer.classList.remove("paused");
+      musicPlayer.classList.add("playing");
+    } else {
+      audio.pause(); // Pause the music
+      musicPlayer.classList.remove("playing");
+      musicPlayer.classList.add("paused");
+    }
+  });
+
+  const lotusModal = document.getElementById("lotus-modal");
+  const closeLotus = document.getElementById("close-lotus");
+  const lotusTrigger = document.getElementById("lotus"); // Assuming this is the trigger for the modal
+
+  // Open the modal
+  lotusTrigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    lotusModal.classList.remove("hidden");
+  });
+
+  // Close the modal
+  closeLotus.addEventListener("click", () => {
+    lotusModal.classList.add("hidden");
+  });
+
+  // Optional: Close the modal when clicking outside the content
+  window.addEventListener("click", (event) => {
+    if (event.target === lotusModal) {
+      lotusModal.classList.add("hidden");
+    }
+  });
+
+  const rotationSpeedSlider = document.getElementById("rotationSpeed");
+  const speedValue1 = document.getElementById("speedValue1");
+  const smallest = document.querySelector(".smallest");
+  const largest = document.querySelector(".largest");
+  const middle = document.querySelector(".middle");
+
+  // Function to update the animation duration
+  const updateRotationSpeed = () => {
+    const speed = rotationSpeedSlider.value;
+    speedValue1.textContent = speed;
+
+    // Update the animation duration for each image
+    smallest.style.animationDuration = `${speed}ms`;
+    largest.style.animationDuration = `${speed}ms`;
+    middle.style.animationDuration = `${speed}ms`;
+  };
+
+  // Add event listener to the slider
+  rotationSpeedSlider.addEventListener("input", updateRotationSpeed);
+
+  // Initialize the rotation speed
+  updateRotationSpeed();
 });
 
 // Music player from previous project
@@ -162,14 +222,16 @@ function play() {
   }
   
   setInterval(update,10);
-  function updateTime() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString();
-    document.getElementById('current-time').textContent = timeString;
-  }
-  
-  setInterval(updateTime, 1000); // Update every 1000 milliseconds (1 second)
-  updateTime(); // Initial call to display time immediately
+
+function updateDateTime() {
+  const now = new Date();
+  const dateString = now.toLocaleDateString();
+  const timeString = now.toLocaleTimeString();
+  document.getElementById('current-time').textContent = `${dateString} ${timeString}`;
+}
+
+setInterval(updateDateTime, 1000); // Update every second
+updateDateTime(); // Initial call to display immediately
 
   //loading screeeen
 //   var loading_screen = document.querySelector(".loading");
@@ -177,3 +239,52 @@ function play() {
 // window.addEventListener('load', function() {
 //     loading_screen.style.display = 'none';
 // })
+// Creating a new date object with the current date and time
+const now = new Date();
+
+// Creating a new date object with a specific date and time
+const specificDate = new Date('2024-07-20T10:30:00');
+
+// Creating a new date object with year, month (0-indexed), day, hours, minutes, seconds, milliseconds
+const anotherDate = new Date(2025, 4, 11, 15, 45, 30, 500);
+
+// Getting date components
+const year = now.getFullYear();
+const month = now.getMonth(); // 0-indexed
+const day = now.getDate();
+const hours = now.getHours();
+const minutes = now.getMinutes();
+const seconds = now.getSeconds();
+const milliseconds = now.getMilliseconds();
+
+// Setting date components
+specificDate.setFullYear(2026);
+specificDate.setMonth(6); // 0-indexed
+specificDate.setDate(25);
+specificDate.setHours(12);
+specificDate.setMinutes(0);
+specificDate.setSeconds(0);
+specificDate.setMilliseconds(0);
+
+// Formatting dates
+const isoString = now.toISOString();
+const dateString = now.toDateString();
+const timeString = now.toTimeString();
+const localeDateString = now.toLocaleDateString();
+const localeTimeString = now.toLocaleTimeString();
+
+// Getting timestamp (milliseconds since epoch)
+const timestamp = now.getTime();
+
+// Creating date from timestamp
+const dateFromTimestamp = new Date(timestamp);
+
+// Parsing date from string
+const parsedDate = new Date(Date.parse('2024-07-20T10:30:00'));
+
+// Date arithmetic
+const futureDate = new Date(now);
+futureDate.setDate(now.getDate() + 7); // Add 7 days
+
+const pastDate = new Date(now);
+pastDate.setDate(now.getDate() - 3); // Subtract 3 days

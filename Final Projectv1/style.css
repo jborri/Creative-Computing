@@ -195,6 +195,63 @@ h1 {
   
 }
 
+#musicplayer {
+  background-color: transparent;
+   /* Default color when music is paused */
+  cursor: pointer;
+  transition: background-color 0.3s ease, background 0.3s ease;
+  width: 200px;
+  height: 250px;
+  /* border: 2px solid #333; */
+  /* margin: 40px; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  margin-bottom: 20%;
+  left: 0;
+  top: 400px;
+}
+
+#musicplayer img{
+  width: 200px;
+  height: 250px;
+}
+
+#musicplayer img:hover{
+ color:aqua;
+ /* background: greenyellow, 0 0 0 0; */
+ background: radial-gradient(circle, rgb(103, 236, 243) 0%, transparent 70%);
+
+}
+
+#musicplayer.playing img {
+  background: radial-gradient(circle, rgb(103, 236, 243) 0%, transparent 70%);
+}
+
+#musicplayer.paused img {
+  background: radial-gradient(circle, rgb(243, 103, 103) 0%, transparent 70%);
+}
+
+#musicplayer:hover:after {
+    position: absolute;
+    content: attr(title);
+    display: inline-block;
+    left: 83px;
+    top: 100px;
+    padding: 5px;
+    background-color: rgb(214, 254, 208);
+    color: rgb(87, 148, 86);
+    width: 50px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px, solid, black;
+    font-size: 12px;
+    transform: rotate(2.3deg);
+}
 
 /* Modal styles */
 .modal {
@@ -221,6 +278,45 @@ h1 {
   box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%);
   position: relative;
   height: 600px;
+}
+
+.modal-contentlotus {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit the maximum width */
+  text-align: center;
+  /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
+  position: relative;
+  height: 600px;
+  color: white;
+}
+.modallotus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease;
+}
+
+.modallotus.hidden {
+  opacity: 0; /* Fully transparent */
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+}
+
+/* Visible state for the modal */
+.modallotus {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Allow interaction when visible */
 }
 
 .close-button {
@@ -274,8 +370,8 @@ h1 {
   main {
     background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
   }
-
-  .modal-content {
+}
+.modal-content {
     width: 90%; /* Adjust for smaller screens */
   }
 }
@@ -368,4 +464,139 @@ h1 {
   z-index: 2;
   position: fixed;
   pointer-events: none;
+}
+
+/* Keyframe animation for clockwise rotation */
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); /* Positive value for clockwise rotation */
+  }
+}
+
+/* Keyframe animation for counterclockwise rotation */
+@keyframes rotateCounterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg); /* Negative value for counterclockwise rotation */
+  }
+}
+
+/* Apply clockwise rotation to smallest.png and largest.png */
+.smallest,
+.largest {
+  animation: rotateClockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+}
+
+/* Apply counterclockwise rotation to middle.png */
+.middle {
+  animation: rotateCounterclockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+}
+
+/* Keyframe animation for counterclockwise rotation */
+.middle {
+  animation: rotateCounterclockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+}
+
+#lotus {
+  position: fixed; /* Fixes the element to the viewport */
+  top: 75%; /* Center vertically relative to the viewport */
+  left: 50%; /* Center horizontally relative to the viewport */
+  transform: translate(-50%, -50%); /* Adjust to center the element exactly */
+  display: flex;
+  flex-direction: column;
+  z-index: 2; /* Ensure it stays above other elements */
+  color: rgb(182, 169, 218);
+}
+
+#lotus a{
+  color: rgb(182, 169, 218);
+}
+
+#lotus img {
+  width: 80px;
+  height: 80px;
+  /* background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 85%); */
+}
+#lotus img:hover {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 85%);
+}
+
+@media (max-width: 768px) {
+  #lotus {
+    top: 60%; /* Adjust for smaller screens */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Image stack styles */
+.image-stack {
+  position: relative; /* Establishes a positioning context for child elements */
+  width: 100%; /* Adjust based on your layout */
+  height: auto; /* Adjust based on your layout */
+  pointer-events: none;
+}
+
+.image-stack img {
+  position: absolute; /* Stack images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure both images are the same size */
+  height: auto;
+}
+
+.image-stack .smallest {
+  z-index: 1; /* Ensure the smallest image is on top */
+}
+
+.image-stack .largest {
+  z-index: 0; /* Ensure the largest image is below */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slider-container {
+  margin-top: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
+#rotationSpeed {
+  width: 80%;
+  margin: 10px auto;
 }

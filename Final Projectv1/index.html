@@ -16,16 +16,18 @@
     <title>proteanpunk</title>
     <!-- os loading screen? -->
     <main>
-      <audio preload="auto" src="Gerudo Valley.mp3" loop="true" autobuffer pre>
-        Unsupported in Firefox
-        </audio>
-        <div id="bar">
-          <h1 id="start-button">start</h1>
-          <span id="current-time"></span>
-        </div>
+      <audio id="background-music" preload="auto" src="Gerudo Valley.mp3" loop="true" autobuffer></audio>
+      <div id="bar">
+        <h1 id="start-button">start</h1>
+        <span id="current-time"><br></span><br>
+        <div id="current-date"></div>
+      </div>
+      <div id="lotus">
+        <a href='#'><img src="images/desktop/lotus.png"><br>meditate.exe</img>
+          </a>
+      </div>
       <div id="desktop">
 
-      
         <div id="start-menu" class="hidden">
           <ul>
             <li><a href="door1.html">Nature.exe</a></li>
@@ -54,7 +56,11 @@
             </a>
             <a href="#" id="me-link">Me.exe</a>
           </div>
+          <div id="musicplayer" title="Current Song: Gerudo Valley">
+            <a href='#'><img src="images/desktop/beemo.png"></img></a>
+          </div>
         </div>
+        
       </div>
 
       <!-- Modal for Door 1 -->
@@ -118,6 +124,26 @@
       <div class="nature3">
         <img id="slideshow3" src="" alt="Slideshow Image" />
       </div>
+        </div>
+      </div>
+
+      <!-- Modal for Lotus -->
+      <div id="lotus-modal" class="modallotus hidden">
+        <div class="modal-contentlotus">
+          <span class="close-button" id="close-lotus">&times;</span>
+          <h2>Peace within the chaos</h2>
+          <p>catch your breath.</p>
+          <div class="image-stack">
+            <img src="images/desktop/smallest.png" alt="Smallest Lotus" class="smallest" />
+            <img src="images/desktop/largest.png" alt="Largest Lotus" class="largest" />
+            <img src="images/desktop/middle.png" alt="Middle Lotus" class="middle" />
+            <img src="images/desktop/float.png" alt="floatitate" class="floating" />
+          </div>
+          <div class="slider-container">
+            <label for="rotationSpeed">Rotation Speed (ms): </label>
+            <input id="rotationSpeed" type="range" min="1000" max="10000" step="500" value="5000" />
+            <span id="speedValue1">5000</span> ms
+          </div>
         </div>
       </div>
     </main>
