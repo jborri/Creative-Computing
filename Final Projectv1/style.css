@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+main {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(images/desktop/IMG_1822.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Jersey 10"; /* Ensures the image scales with the window size????idkkkk!!!!! */
+}
+
+#desktop {
+  /* background-color: #f0f0f0; */
+  font-family: Arial, sans-serif;
+  color: #333;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+  font-family: "Jersey 10";
+
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Jersey 10";
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  background-color:darkblue;
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  color: white;
+  
+}
+#bar{
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  color: white;
+  justify-content: space-between;
+  background-color: darkblue;
+  font-size: 24px;
+}
+
+.doorname {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px; 
+
+  p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 0 60px 0;;
+  }
+
+}
+.doors {
+  margin-top: 0px; 
+  padding: 0; 
+  display: flex; 
+  justify-content: center; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content:flex-end;
+  width: auto;
+  height: auto;
+  
+
+}
+
+.door1 {
+  background-color:transparent;
+  width: 75px;
+  height: 75px;
+  /* border: 2px solid #333; */
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+.door1 img{
+  width: 150px;
+  height: 150px;
+
+}
+.door2 {
+  background-color:transparent;
+  width: 75px;
+  height: 75px;
+  /* border: 2px solid #333; */
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+.door2 img{
+  width: 100px;
+  height: 100px;
+}
+.door3 {
+  background-color:transparent;
+  width: 75px;
+  height: 75px;
+  /* border: 2px solid #333; */
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+ 
+}
+.door3 img{
+  width: 100px;
+  height: 100px;
+}
+
+#start-menu {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 200px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+}
+
+#start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#start-menu li {
+  margin: 5px 0;
+}
+
+#start-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+/* spacing for the start button not sure if this works lol*/
+#start-button {
+  margin: 0px 0; /* Reduce the top and bottom margin */
+  padding: 0; /* Remove unnecessary padding */
+}
+
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit the maximum width */
+  text-align: center;
+  box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%);
+  position: relative;
+  height: 600px;
+}
+
+.close-button {
+  position: absolute;
+  /* top: 10px;
+  right: 10px; */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Overlay styles */
+.overlay {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.overlay img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  pointer-events: none;
+}
+
+/* Slideshow styles */
+.Nature {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.Nature img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust for smaller screens */
+  }
+}
+#slideshow{
+  width: 800px;
+  height: 700px;
+}
+#slideshow3{
+  width: 800px;
+  height: 700px;
+}
+#slideshow2{
+  width: 800px;
+  height: 700px;
+}
+/* Slideshow styles */
+.nature2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.nature2 img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+/* Overlay styles */
+.overlay2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.overlay2 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  pointer-events: none;
+  scale: 70%;
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  padding-top: 300px;
+  border: black 2px solid;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+}
+
+/* Slideshow styles */
+.nature3 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.nature3 img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+/* Overlay styles */
+.overlay3 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.overlay3 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  pointer-events: none;
+}
