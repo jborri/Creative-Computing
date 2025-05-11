@@ -6,13 +6,35 @@
     <link rel="stylesheet" type="text/css" href="loading.css" />
 
     <meta charset="utf-8" />
+       <style>
+        body {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+                color: black;
+                background-color: black;
+                
+            }
+
+            100% {
+                opacity: 1;
+                background-color: black;
+                /* color: black; */
+            }
+        }
+    </style>
   </head>
   <body>
     <title>loading...</title>
     <main>
-      <div id="preloader">Loading...
-        <h2>RANDOMLY CREATING COLLAGE... ONE SECOND...</h1>
+      <div id="preloader" style="background-color: black;">Loading...
+        <!-- <h2>RANDOMLY CREATING COLLAGE... ONE SECOND...</h1> -->
           <img src="https://media1.tenor.com/m/pA3iQm28pU4AAAAC/481.gif"/>
+          <!-- <img src="images/desktop/blur copy.gif"/> -->
      <!-- <div>LOADED</div> -->
     </div>
 

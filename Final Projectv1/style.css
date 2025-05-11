@@ -7,7 +7,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url(images/desktop/IMG_1822.jpg);
+  background-image: url(images/desktop/wallpaper.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -18,7 +18,7 @@ main {
 #desktop {
   /* background-color: #f0f0f0; */
   font-family: Arial, sans-serif;
-  color: #333;
+  color: white;
   width: auto;
   height: auto;
   padding: 0;
@@ -39,11 +39,15 @@ h1 {
   font-size: 24px;
   margin: 0;
   text-align: center;
-  background-color:darkblue;
+  background-color: rgb(151, 208, 230);
   display: flex;
   flex-direction: row;
   align-content: baseline;
   color: white;
+  padding-right: 50px;
+  width: 100px;
+  align-items: center;
+  align-content: center;
   
 }
 #bar{
@@ -52,8 +56,9 @@ h1 {
   align-content: baseline;
   color: white;
   justify-content: space-between;
-  background-color: darkblue;
+  background-color: rgb(70, 183, 228);
   font-size: 24px;
+  background-image: url('images/desktop/bar.png');
 }
 
 .doorname {
@@ -152,6 +157,8 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   display: none;
+  background-image: url('images/desktop/bar.png');
+
 }
 
 #start-menu ul {
@@ -166,17 +173,26 @@ h1 {
 
 #start-menu a {
   text-decoration: none;
-  color: #333;
+  color: white;
 }
 
 .hidden {
   display: none;
 }
 
+
 /* spacing for the start button not sure if this works lol*/
 #start-button {
   margin: 0px 0; /* Reduce the top and bottom margin */
   padding: 0; /* Remove unnecessary padding */
+  align-items: center;
+  padding-left: 20px;
+  background-image: url('images/desktop/button.png');
+  color: rgb(182, 169, 218);
+  height: 40px;
+  width: 80px;
+  background-color: transparent;
+  
 }
 
 
