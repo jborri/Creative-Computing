@@ -1,6 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
+  }
+  #lotus {
+    top: 60%; /* Adjust for smaller screens */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Keyframe animation for clockwise rotation */
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); /* Positive value for clockwise rotation */
+  }
+}
+
+/* Keyframe animation for counterclockwise rotation */
+@keyframes rotateCounterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg); /* Negative value for counterclockwise rotation */
+  }
+}
+
+/* Apply clockwise rotation to smallest.png and largest.png */
+.smallest,
+.largest {
+  animation: rotateClockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+}
+
+/* Apply counterclockwise rotation to middle.png */
+.middle {
+  animation: rotateCounterclockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 main {
   background-color: #f0f0f0;
   width: 100%;
@@ -11,23 +85,9 @@ main {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
-  font-family: "Jersey 10"; /* Ensures the image scales with the window size????idkkkk!!!!! */
+  background-size: cover; /* Ensures the image scales with the window size????idkkkk!!!!! */
+  font-family: "Jersey 10"; 
 }
-
-#desktop {
-  /* background-color: #f0f0f0; */
-  font-family: Arial, sans-serif;
-  color: white;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  z-index: 0;
-  font-family: "Jersey 10";
-
-}
-
 body, html {
   margin: 0;
   padding: 0;
@@ -47,9 +107,29 @@ h1 {
   padding-right: 50px;
   width: 100px;
   align-items: center;
-  align-content: center;
-  
+  align-content: center; 
 }
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 0 60px 0;;
+}
+
+#desktop {
+  /* background-color: #f0f0f0; */
+  font-family: Arial, sans-serif;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+  font-family: "Jersey 10";
+}
+
 #bar{
   display: flex;
   flex-direction: row;
@@ -68,16 +148,8 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px; 
-
-  p{
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin: 0 60px 0;;
-  }
-
 }
+
 .doors {
   margin-top: 0px; 
   padding: 0; 
@@ -88,8 +160,6 @@ h1 {
   align-content:flex-end;
   width: auto;
   height: auto;
-  
-
 }
 
 .door1 {
@@ -104,13 +174,13 @@ h1 {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-
 }
+
 .door1 img{
   width: 150px;
   height: 150px;
-
 }
+
 .door2 {
   background-color:transparent;
   width: 75px;
@@ -123,12 +193,13 @@ h1 {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-
 }
+
 .door2 img{
   width: 100px;
   height: 100px;
 }
+
 .door3 {
   background-color:transparent;
   width: 75px;
@@ -141,8 +212,8 @@ h1 {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
- 
 }
+
 .door3 img{
   width: 100px;
   height: 100px;
@@ -159,7 +230,6 @@ h1 {
   padding: 10px;
   display: none;
   background-image: url('images/desktop/bar.png');
-
 }
 
 #start-menu ul {
@@ -181,7 +251,6 @@ h1 {
   display: none;
 }
 
-
 /* spacing for the start button not sure if this works lol*/
 #start-button {
   margin: 0px 0; /* Reduce the top and bottom margin */
@@ -193,7 +262,6 @@ h1 {
   height: 40px;
   width: 80px;
   background-color: transparent;
-  
 }
 
 #musicplayer {
@@ -226,7 +294,6 @@ h1 {
  color:aqua;
  /* background: greenyellow, 0 0 0 0; */
  background: radial-gradient(circle, rgb(103, 236, 243) 0%, transparent 70%);
-
 }
 
 #musicplayer.playing img {
@@ -295,6 +362,7 @@ h1 {
   height: 600px;
   color: white;
 }
+
 .modallotus {
   position: fixed;
   top: 0;
@@ -368,12 +436,6 @@ h1 {
   z-index: 1;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  main {
-    background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
-  }
-}
 .modal-content {
     width: 90%; /* Adjust for smaller screens */
   }
@@ -469,42 +531,6 @@ h1 {
   pointer-events: none;
 }
 
-/* Keyframe animation for clockwise rotation */
-@keyframes rotateClockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg); /* Positive value for clockwise rotation */
-  }
-}
-
-/* Keyframe animation for counterclockwise rotation */
-@keyframes rotateCounterclockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg); /* Negative value for counterclockwise rotation */
-  }
-}
-
-/* Apply clockwise rotation to smallest.png and largest.png */
-.smallest,
-.largest {
-  animation: rotateClockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
-}
-
-/* Apply counterclockwise rotation to middle.png */
-.middle {
-  animation: rotateCounterclockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
-}
-
-/* Keyframe animation for counterclockwise rotation */
-.middle {
-  animation: rotateCounterclockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
-}
-
 #lotus {
   position: fixed; /* Fixes the element to the viewport */
   top: 75%; /* Center vertically relative to the viewport */
@@ -531,13 +557,6 @@ h1 {
   background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 85%);
 }
 
-@media (max-width: 768px) {
-  #lotus {
-    top: 60%; /* Adjust for smaller screens */
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
 
 /* Image stack styles */
 .image-stack {
@@ -563,36 +582,6 @@ h1 {
   z-index: 0; /* Ensure the largest image is below */
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(-7px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-.floating {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .slider-container {
   margin-top: 20px;
   text-align: center;
@@ -611,4 +600,44 @@ h1 {
   margin-top: 20px;
   text-align: center;
   z-index: 1000;
+}
+
+span#current-time, #current-date{
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  padding-left: 400px;
+}
+.emoji-container {
+  position: relative; /* Ensures emojis are positioned relative to this container */
+  width: 100%;
+  height: 100vh; /* Covers the whole viewport height */
+  overflow: hidden; /* Prevents emojis from causing scrollbars */
+}
+
+.emoji {
+    position: absolute; /* Allows individual positioning */
+    font-size: 1em; /* Adjust size as desired */
+    top: -2em; /* Start them slightly above the top of the screen */
+    animation-duration: 5s;  /* Adjust animation duration */
+    animation-timing-function: linear; /* Constant falling speed */
+    pointer-events: none; /* Allows interaction with underlying elements */
+    z-index: 100;
+    width: 10px;
+    height: 5px;
+}
+
+/* Generate some random animation delays */
+.emoji:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+.emoji:nth-child(even) {
+  animation-delay: 2s;
+}
+
+/* Create a falling animation (use CSS keyframes) */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
 }

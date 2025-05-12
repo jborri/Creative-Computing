@@ -287,3 +287,33 @@ futureDate.setDate(now.getDate() + 7); // Add 7 days
 
 const pastDate = new Date(now);
 pastDate.setDate(now.getDate() - 3); // Subtract 3 days
+
+const emojiContainer = document.querySelector('.emoji-container');
+const emojis = ['🍃', '🍃', '🪻', '🍃', '🪻'];  // Your emojis
+
+function createFallingEmoji() {
+    const emoji = document.createElement('span');
+    emoji.classList.add('emoji');
+    emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+    // Random horizontal starting position
+    emoji.style.left = `${Math.random() * 100}%`;
+
+    // Apply falling animation
+    emoji.style.animationName = "fall";
+
+    // Random duration for a varied effect
+    emoji.style.animationDuration = `${Math.random() * 4 + 3}s`; // Duration between 3-7s
+
+    //Add the emoji to the container
+    emojiContainer.appendChild(emoji);
+
+
+     // Remove the emoji after it finishes falling
+    emoji.addEventListener('animationend', () => {
+        emoji.remove();
+    });
+}
+
+// Create a new emoji every so often (e.g. every half a second)
+setInterval(createFallingEmoji, 1000);

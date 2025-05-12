@@ -102,3 +102,4 @@ console.log('timesup')
 function hidePreloader() {
    document.getElementById("preloader").remove()
 }
+

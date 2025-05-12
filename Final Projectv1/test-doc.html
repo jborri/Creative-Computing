@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Falling Emoji</title>
+<style>
+.emoji {
+  position: absolute;
+  font-size: 2em;
+  top: -2em; /* Start above the screen */
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="emoji"><img src="images/blur.gif"></div>
+
+  <script>
+    function getRandomPosition() {
+      return Math.floor(Math.random() * window.innerWidth);
+    }
+
+    function resetEmojiPosition(emoji) {
+      emoji.style.left = getRandomPosition() + 'px';
+      emoji.style.top = '-2em';
+    }
+
+    const emoji = document.querySelector('.emoji');
+    emoji.style.left = getRandomPosition() + 'px';
+
+    emoji.addEventListener('animationiteration', () => {
+      resetEmojiPosition(emoji);
+    });
+  </script>
+</body>
+</html>

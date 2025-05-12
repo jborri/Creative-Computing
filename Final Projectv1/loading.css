@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
-
-
 
 main {
   background-color: black;
@@ -15,6 +12,51 @@ main {
   background-position: center;
   background-size: cover; /* Ensures the image scales with the window size????idkkkk!!!!! */
   font-family: "Jersey 10";
+}
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; 
+}
+
+label {
+  color: white;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  background-color:lime;
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  color: black;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: rgb(178, 178, 255);
+}
+
+@keyframes fadeInAnimation { 
+    0% {
+      opacity: 0;
+      color: black;
+      background-color: black;        
+}
+
+    100% {
+      opacity: 1;
+      background-color: black;
+      /* color: black; */
+}
 }
 
 #user {
@@ -31,8 +73,6 @@ main {
   flex-wrap: wrap;
   align-items: center;
   position: relative;
-  
-
 }
 
 #preloader {
@@ -52,10 +92,6 @@ main {
   transition-duration: 5ms, 0.5;
 }
 
-/* #preloader img{
-  ;
-} */
-
 .loading {
     position: absolute;
     z-index: 5;
@@ -67,32 +103,6 @@ main {
     justify-content: center;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  
-}
-
-label {
-  color: white;
-}
-
-h1 {
-  font-size: 24px;
-  margin: 0;
-  text-align: center;
-  background-color:lime;
-  display: flex;
-  flex-direction: row;
-  align-content: baseline;
-  color: black;
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: rgb(178, 178, 255);
-  
-}
 #bar{
   display: flex;
   flex-direction: row;
@@ -103,9 +113,7 @@ h1 {
   font-size: 24px;
   background-image: url('images/desktop/bar.png');
   height: 30px;
-  position:inherit;
-  
- 
+  position:inherit; 
 }
 
 #start-menu {
@@ -138,15 +146,12 @@ h1 {
 /* spacing for the start button not sure if this works lol*/
 #start-button {
   margin: 0px 0; /* Reduce the top and bottom margin */
-  padding: 0; /* Remove unnecessary padding */
-  
+  padding: 0; /* Remove unnecessary padding */ 
 }
-
 
 /* Login form styles */
 #login-form {
-  text-align: center;
-  
+  text-align: center; 
   border-radius: 15px;
   /* background-color: #ccc; */
 }
@@ -156,7 +161,6 @@ h1 {
   margin: 5px;
   width: 200px;
   border-radius: 25px;
-  
 }
 
 #submit-button {
@@ -175,7 +179,6 @@ h1 {
 
 #icon{
   padding-left: 60px;
-
 }
 
 #icon img{
@@ -190,4 +193,3 @@ h1 {
   color:white;
   top: 0px
 }
-
