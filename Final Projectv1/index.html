@@ -6,11 +6,6 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preload" href="menu.js" as="script" />
     <meta charset="utf-8" />
-    <style>
-      .hidden {
-        display: none;
-      }
-    </style>
   </head>
   <body>
     <title>proteanpunk</title>
@@ -29,25 +24,27 @@
       <div id="start-menu" class="hidden">
           <ul>
             <li><a href="door1.html">Nature.exe</a></li>
-            <li><a href="door2.html">memes.exe</a></li>
+            <li><a href="reflect.html">memes.exe</a></li>
             <li><a href="door3.html">Me.exe</a></li>
           </ul>
       </div>
 
-        <div class="doorname"></div>
-      <div class="doors">
-          <div class="door1">
+                <div class="door1">
             <a href="#" id="door1-link">
               <img src="images/desktop/bulbasaur.gif" alt="Door 1" />
             </a>
             <a href="#" id="nature-link">Nature.exe</a>
           </div>
-          <div class="door2">
-            <a href="#" id="door2-link">
+
+               <div class="reflect">
+            
+            <a href="#" id="reflect-link">
               <img src="images/desktop/Wartortle.png" alt="Door 2" />
             </a>
-            <a href="#" id="memes-link">memes.exe</a>
+            <a href="#" id="memes-link">reflect.exe</a>
           </div>
+      <div class="doors">
+ 
           <div class="door3">
             <a href="#" id="door3-link">
               <img src="images/desktop/Charizard.webp" alt="Door 3" />
@@ -80,24 +77,24 @@
         </div>
     </div>
 </div>
-      <!-- Modal for Door 2 -->
-<div id="door2-modal" class="modal hidden">
-     <div class="modal-content">
-          <span class="close-button" id="close-door2">&times;</span>
-          <h2>Memes</h2>
-      <div class="slider2">
-        <div class="slider-container2">
-          <label for="speedSlider2">Cycle Speed (ms): </label>
-          <input id="speedSlider2" type="range" min="500" max="5000" step="500" value="1000" />
-          <span id="speedValue2">1000</span> ms
-        </div>
+      <!-- Modal for reflect.exe -->
+<div id="reflect-modal" class="modalreflect hidden">
+     <div class="modal-contentreflect">
+
+          <span class="close-button" id="close-reflect">&times;</span>
+          <h2>Reflection.</h2>
+
+      <div class="reflect-container">
+                      <div class="emoji-container1">
+                  <!-- Emojis will be added here dynamically -->
+              </div>
+            <img id="slideshow2" src="images/desktop/reflection.png" alt="Slideshow Image" />
+            <textarea class="reflect-textbox" placeholder="Type passing thoughts here..."></textarea>
+              <button class="submit-button">Submit</button>
+  <div class="scrolling-text"></div>
+  <div class="scrolling-text-container"></div> <!-- Container for multiple scrolling texts -->
       </div>
-      <div class="overlay2">
-          <img src="images/door1/watch.png" alt="Watch" />
-      </div>
-      <div class="nature2">
-            <img id="slideshow2" src="" alt="Slideshow Image" />
-      </div>
+
     </div>
 </div>
       <!-- Modal for Door 3 -->
@@ -122,15 +119,14 @@
 </div>
       <!-- Modal for Lotus -->
       <div id="lotus-modal" class="modallotus hidden">
-        <div id="petal-container"></div>
         <div class="modal-contentlotus">
           <span class="close-button" id="close-lotus">&times;</span>
           <h2>Peace within the chaos</h2>
           <p>catch your breath.</p>
           <div class="slider-container1">
             <label for="rotationSpeed1">Rotation Speed (ms): </label>
-            <input id="rotationSpeed1" type="range" min="1000" max="10000" step="500" value="5000" />
-            <span id="speedValue1">5000</span> ms
+            <input id="rotationSpeed1" type="range" min="1000" max="10000" step="10" value="10000" />
+            <span id="speedValue1">5000</span> Hz
           </div>
           <div class="image-stack">
               <div class="emoji-container">

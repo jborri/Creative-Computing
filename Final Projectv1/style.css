@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap');
 
 
 /* Responsive adjustments */
@@ -7,6 +8,11 @@
     background-size: contain; /* Adjust for smaller screens maybe? google moarrr*/
   }
   #lotus {
+    top: 60%; /* Adjust for smaller screens */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .reflect {
     top: 60%; /* Adjust for smaller screens */
     left: 50%;
     transform: translate(-50%, -50%);
@@ -81,7 +87,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url(images/desktop/wallpaper.png);
+  background-image: url(images/desktop/wallpaperv2.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -150,30 +156,33 @@ p{
   margin-top: 20px; 
 }
 
-.doors {
-  margin-top: 0px; 
-  padding: 0; 
-  display: flex; 
-  justify-content: center; 
-  flex-direction: column;
+/* .doors {
+  margin-top: 0px;
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  align-content:flex-end;
+  align-content: flex-start;
   width: auto;
   height: auto;
-}
+  align-items: center;
+    justify-content: space-around;
+} */
 
 .door1 {
-  background-color:transparent;
-  width: 75px;
-  height: 75px;
-  /* border: 2px solid #333; */
-  margin: 40px;
+   position: fixed; /* Fixes the element relative to the viewport */
+  top: 35%; /* Center vertically relative to the viewport */
+  left: 10%; /* Center horizontally relative to the viewport */
+  transform: translate(-50%, -50%); /* Adjust to center the element exactly */
+  background-color: transparent;
   display: flex;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+  width: 150px; /* Adjust width */
+  height: 150px; /* Adjust height */
 }
 
 .door1 img{
@@ -181,42 +190,59 @@ p{
   height: 150px;
 }
 
-.door2 {
-  background-color:transparent;
-  width: 75px;
-  height: 75px;
-  /* border: 2px solid #333; */
-  margin: 40px;
+.door1 a{
+  color: white;
+}
+
+.reflect {
+  position: fixed; /* Fixes the element relative to the viewport */
+  top: 45%; /* Center vertically relative to the viewport */
+  left: 80%; /* Center horizontally relative to the viewport */
+  transform: translate(-50%, -50%); /* Adjust to center the element exactly */
+  background-color: transparent;
   display: flex;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+  width: 150px; /* Adjust width */
+  height: 150px; /* Adjust height */
+  
 }
 
-.door2 img{
-  width: 100px;
-  height: 100px;
+.reflect img{
+  width: 150px; /* Adjust width */
+  height: 150px; /* Adjust height */
+}
+
+.reflect a{
+  color: white;
 }
 
 .door3 {
-  background-color:transparent;
-  width: 75px;
-  height: 75px;
-  /* border: 2px solid #333; */
-  margin: 40px;
+   position: fixed; /* Fixes the element relative to the viewport */
+  top: 85%; /* Center vertically relative to the viewport */
+  left: 85%; /* Center horizontally relative to the viewport */
+  transform: translate(-50%, -50%); /* Adjust to center the element exactly */
+  background-color: transparent;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
+  flex-direction: column;
   justify-content: center;
+  color: green;
+  flex-wrap: wrap;
+  width: 150px; /* Adjust width */
+  height: 150px; /* Adjust height */
 }
 
 .door3 img{
   width: 100px;
   height: 100px;
+}
+
+.door3 a{
+  color: white;
 }
 
 #start-menu {
@@ -279,7 +305,7 @@ p{
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   margin-bottom: 20%;
   left: 0;
   top: 400px;
@@ -348,7 +374,42 @@ p{
   box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%);
   position: relative;
   height: 600px;
+  background-color: transparent;
 }
+
+.modal-contentreflect {
+  /* background-color: #c2aedc; */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit the maximum width */
+  text-align: center;
+  /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
+  position: relative;
+  height: 600px;
+  background-color: transparent;
+  color: #9b9292;
+  
+}
+
+#memes-link{
+  color: white;
+}
+
+.modalreflect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
 
 .modal-contentlotus {
   background-color: transparent;
@@ -449,24 +510,28 @@ p{
   height: 700px;
 }
 #slideshow2{
-  width: 800px;
-  height: 700px;
+  height: 500px;
+  width: inherit;
+  align-items: center;
+   background-color:transparent;
 }
 /* Slideshow styles */
-.nature2 {
+.reflect {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  background-color: transparent;
 }
 
-.nature2 img {
+.reflect img {
   max-width: 100%;
   max-height: 400px;
   height: auto;
   display: block;
   z-index: 1;
+  background-color: transparent;
 }
 
 /* Overlay styles */
@@ -640,4 +705,67 @@ span#current-time, #current-date{
     to {
         transform: translateY(100vh);
     }
+}
+
+.reflect-container {
+  position: relative; /* Establishes a positioning context for child elements */
+  width: 400px; /* Set the width of the container */
+  height: 300px; /* Set the height of the container */
+  margin: 20px auto; /* Center the container horizontally */
+}
+
+.reflect-container textarea{
+  font-family: "Jersey 10";
+  font-size: 22px;
+}
+
+.reflect-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover; /* Ensure the image scales properly */
+  z-index: 1; /* Place the image below the text box */
+}
+
+.reflect-textbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%; /* Make the text box fill the container */
+  height: 160%; /* Make the text box fill the container */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: rgb(226, 223, 223); /* Text color */
+  border: none; /* Remove the border */
+  z-index: 2; /* Place the text box above the image */
+  padding: 10px; /* Add some padding inside the text box */
+  font-size: 22px; /* Adjust the font size */
+  resize: none; /* Prevent resizing of the text box */
+  outline: none; /* Remove the focus outline */
+  overflow: auto;
+}
+.scrolling-text {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Start off-screen to the right */
+  white-space: wrap; /* Prevent text from wrapping */
+  font-size: 22px; /* Match the font size of the text box */
+  color: rgb(226, 223, 223); /* Text color */
+  z-index: 3; /* Ensure it appears above the image and text box */
+  animation: scrollText 15s linear infinite; /* Adjust duration as needed */
+  width: 100%;
+  height: inherit;
+   pointer-events: none;
+   text-align: left;
+   font-family: "Workbench";
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0); /* Start at the right edge */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left edge */
+  }
 }

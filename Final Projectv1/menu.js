@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeDoor1 = document.getElementById("close-door1");
 
   // Door 2 elements
-  const door2Link = document.getElementById("door2-link");
+  const reflectLink = document.getElementById("reflect-link");
   const memesLink = document.getElementById("memes-link");
-  const door2Modal = document.getElementById("door2-modal");
-  const closeDoor2 = document.getElementById("close-door2");
+  const reflectModal = document.getElementById("reflect-modal");
+  const closereflect = document.getElementById("close-reflect");
 
   // Door 3 elements
   const door3Link = document.getElementById("door3-link");
@@ -65,18 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Door 2 event listeners
-  door2Link.addEventListener("click", (event) => {
+  reflectLink.addEventListener("click", (event) => {
     event.preventDefault();
-    openModal(door2Modal);
+    openModal(reflectModal);
   });
 
   memesLink.addEventListener("click", (event) => {
     event.preventDefault();
-    openModal(door2Modal);
+    openModal(reflectModal);
   });
 
-  closeDoor2.addEventListener("click", () => {
-    closeModal(door2Modal);
+  closereflect.addEventListener("click", () => {
+    closeModal(reflectModal);
   });
 
   // Door 3 event listeners
@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.target === door1Modal) {
       closeModal(door1Modal);
     }
-    if (event.target === door2Modal) {
-      closeModal(door2Modal);
+    if (event.target === reflectModal) {
+      closeModal(reflectModal);
     }
     if (event.target === door3Modal) {
       closeModal(door3Modal);
@@ -288,16 +288,28 @@ futureDate.setDate(now.getDate() + 7); // Add 7 days
 const pastDate = new Date(now);
 pastDate.setDate(now.getDate() - 3); // Subtract 3 days
 
+//falling pics/emojis
+
 const emojiContainer = document.querySelector('.emoji-container');
-const emojis = ['🍃', '🍃', '🪻', '🍃', '🪻'];  // Your emojis
+const emojis = ['🍃', '🍃', '', '🍃', '🪻'];  // Your emojis
 
 function createFallingEmoji() {
     const emoji = document.createElement('span');
     emoji.classList.add('emoji');
-    emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+    // Create an <img> element for the picture
+    const img = document.createElement('img');
+    img.src = 'images/desktop/flower.png'; // Replace with the path to your image
+    img.alt = 'Falling Image'; // Optional: Add alt text for accessibility
+    img.style.width = '150px'; // Adjust the size of the image
+    img.style.height = '150px';
+
+    // Append the image to the emoji container
+    emoji.appendChild(img);
 
     // Random horizontal starting position
     emoji.style.left = `${Math.random() * 100}%`;
+    emoji.style.top = `${-5}%`;
 
     // Apply falling animation
     emoji.style.animationName = "fall";
@@ -305,11 +317,10 @@ function createFallingEmoji() {
     // Random duration for a varied effect
     emoji.style.animationDuration = `${Math.random() * 4 + 3}s`; // Duration between 3-7s
 
-    //Add the emoji to the container
+    // Add the emoji to the container
     emojiContainer.appendChild(emoji);
 
-
-     // Remove the emoji after it finishes falling
+    // Remove the emoji after it finishes falling
     emoji.addEventListener('animationend', () => {
         emoji.remove();
     });
@@ -317,3 +328,39 @@ function createFallingEmoji() {
 
 // Create a new emoji every so often (e.g. every half a second)
 setInterval(createFallingEmoji, 1000);
+
+
+document.querySelector('.submit-button').addEventListener('click', () => {
+  const textBox = document.querySelector('.reflect-textbox');
+  const scrollingTextContainer = document.querySelector('.scrolling-text-container'); // Select the container for multiple texts
+
+  // Get the text from the textarea
+  const text = textBox.value.trim();
+
+  // Clear the textarea
+  textBox.value = '';
+
+  // If the text is empty, do nothing
+  if (!text) return;
+
+  // Create a new scrolling text element
+  const newScrollingText = document.createElement('div');
+  newScrollingText.classList.add('scrolling-text');
+  newScrollingText.textContent = text;
+
+    // Dynamically set the animation duration (e.g., based on text length)
+  const duration = Math.max(25, text.length / 3); // Longer text scrolls slower
+  newScrollingText.style.animationDuration = `${duration}s`;
+
+  // Set a random position for the text (optional)
+  newScrollingText.style.left = '80%'; // Start off-screen to the right
+  newScrollingText.style.top = `${Math.random() * 80}%`; // Random vertical position
+
+  // Append the new text to the scrolling container
+  scrollingTextContainer.appendChild(newScrollingText);
+
+  // Remove the text after the animation ends
+  newScrollingText.addEventListener('animationend', () => {
+    newScrollingText.remove();
+  });
+});
