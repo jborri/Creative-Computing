@@ -141,7 +141,7 @@ p{
   flex-direction: row;
   align-content: baseline;
   color: white;
-  justify-content: space-between;
+  justify-content: center;
   background-color: rgb(70, 183, 228);
   font-size: 24px;
   background-image: url('images/desktop/bar.png');
@@ -172,7 +172,7 @@ p{
 .door1 {
    position: fixed; /* Fixes the element relative to the viewport */
   top: 35%; /* Center vertically relative to the viewport */
-  left: 10%; /* Center horizontally relative to the viewport */
+  left: 20%; /* Center horizontally relative to the viewport */
   transform: translate(-50%, -50%); /* Adjust to center the element exactly */
   background-color: transparent;
   display: flex;
@@ -182,12 +182,17 @@ p{
   color: white;
   flex-wrap: wrap;
   width: 150px; /* Adjust width */
-  height: 150px; /* Adjust height */
+  height: 180px; /* Adjust height */
 }
 
 .door1 img{
   width: 150px;
-  height: 150px;
+  height: 250px;
+
+}
+
+.door1:hover img{
+  background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 75%);
 }
 
 .door1 a{
@@ -214,6 +219,10 @@ p{
 .reflect img{
   width: 150px; /* Adjust width */
   height: 150px; /* Adjust height */
+}
+
+.reflect:hover img{
+  background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 75%);
 }
 
 .reflect a{
@@ -669,9 +678,9 @@ p{
 
 span#current-time, #current-date{
   display: flex;
-  align-items: flex-end;
-  justify-content: right;
-  padding-left: 400px;
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 400px; */
 }
 .emoji-container {
   position: relative; /* Ensures emojis are positioned relative to this container */
