@@ -182,17 +182,22 @@ p{
   color: white;
   flex-wrap: wrap;
   width: 150px; /* Adjust width */
-  height: 180px; /* Adjust height */
+  height: 150px; /* Adjust height */
 }
 
 .door1 img{
   width: 150px;
   height: 250px;
-
+}
+.door1 img:hover{
+  width: 150px;
+  height: 250px;
+  background: radial-gradient(circle, rgb(248, 248, 209) 0%, transparent 75%);
 }
 
-.door1:hover img{
-  background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 75%);
+.reflect img:hover{
+  
+  background: radial-gradient(circle, rgb(248, 248, 209) 0%, transparent 75%);
 }
 
 .door1 a{
@@ -219,10 +224,6 @@ p{
 .reflect img{
   width: 150px; /* Adjust width */
   height: 150px; /* Adjust height */
-}
-
-.reflect:hover img{
-  background: radial-gradient(circle, rgb(243, 241, 103) 0%, transparent 75%);
 }
 
 .reflect a{
@@ -371,6 +372,7 @@ p{
   align-items: center;
   z-index: 1000;
   flex-direction: column;
+  color: white;
 }
 
 .modal-content {
@@ -380,7 +382,7 @@ p{
   width: 80%; /* Adjust width as needed */
   max-width: 600px; /* Limit the maximum width */
   text-align: center;
-  box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%);
+  /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
   position: relative;
   height: 600px;
   background-color: transparent;
@@ -482,17 +484,19 @@ p{
 }
 
 .overlay img {
-  max-width: 100%;
+  max-width: 60%;
+  max-width: 95%;
   height: auto;
   display: block;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   pointer-events: none;
+  top: 10%;
 }
 
 /* Slideshow styles */
 .Nature {
-  margin-top: 20px;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -678,9 +682,9 @@ p{
 
 span#current-time, #current-date{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* padding-left: 400px; */
+  align-items: flex-end;
+  justify-content: right;
+  padding-left: 400px;
 }
 .emoji-container {
   position: relative; /* Ensures emojis are positioned relative to this container */
