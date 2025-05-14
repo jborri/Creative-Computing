@@ -147,6 +147,7 @@ p{
   background-image: url('images/desktop/bar.png');
   align-items: center;
   font-style:oblique;
+  flex-wrap: nowrap;
   
 
 }
@@ -301,12 +302,14 @@ p{
   padding: 0; /* Remove unnecessary padding */
   align-items: left;
   /* background-image: url('images/desktop/button.png'); */
-  color: rgb(255, 255, 255);
+  color: rgb(84, 84, 84);
   height: 40px;
   width: 80px;
   background-color: transparent;
   position:absolute;
-  left:40px;
+  left:0px;
+  background:radial-gradient(lime, black);
+  padding-left: 40px;
   
 }
 

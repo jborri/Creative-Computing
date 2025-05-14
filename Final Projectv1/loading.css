@@ -113,41 +113,11 @@ h1 {
   font-size: 24px;
   background-image: url('images/desktop/bar.png');
   height: 30px;
-  position:inherit; 
+  position:inherit;
+   
 }
 
-#start-menu {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  width: 200px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  display: none;
-}
 
-#start-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#start-menu li {
-  margin: 5px 0;
-}
-
-#start-menu a {
-  text-decoration: none;
-  color: #333;
-}
-
-/* spacing for the start button not sure if this works lol*/
-#start-button {
-  margin: 0px 0; /* Reduce the top and bottom margin */
-  padding: 0; /* Remove unnecessary padding */ 
-}
 
 /* Login form styles */
 #login-form {
@@ -190,7 +160,7 @@ h1 {
 }
 
 #current-time {
-  color:white;
+  color:black;
   top: 0px
 }
 
