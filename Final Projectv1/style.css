@@ -146,6 +146,14 @@ p{
   font-size: 24px;
   background-image: url('images/desktop/bar.png');
   align-items: center;
+  
+
+}
+
+#bar img{
+  /* border-image-repeat:stretch; */
+  width: 2000px;
+  align-items: center;
 }
 
 .doorname {
@@ -484,14 +492,14 @@ p{
 }
 
 .overlay img {
-  max-width: 60%;
+  max-height: 85%;
   max-width: 95%;
   height: auto;
   display: block;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   pointer-events: none;
-  top: 10%;
+  top: 25%;
 }
 
 /* Slideshow styles */
@@ -501,13 +509,20 @@ p{
   justify-content: center;
   align-items: center;
   z-index: 1;
+  position: fixed;
 }
 
 .Nature img {
-  max-width: 100%;
+  max-width: 200px;
+  max-height: 200px;
   height: auto;
   display: block;
   z-index: 1;
+  padding-top: 790px;
+  padding-left: 718px;
+rotate: 5deg;
+position: absolute;
+pointer-events: none;
 }
 
 .modal-content {
@@ -663,7 +678,7 @@ p{
 .slider-container {
   margin-top: 20px;
   text-align: center;
-  z-index: 1000;
+  z-index: 27000;
 }
 
 #rotationSpeed {
