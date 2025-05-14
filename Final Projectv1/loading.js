@@ -1,5 +1,5 @@
 function play() {
-  var audio = new Audio('Gerudo Valley.mp3');
+  var audio = new Audio('Because of You.mp3');
   audio.play();
   audio.loop = true;
   audio.volume = 0.2;
