@@ -140,12 +140,13 @@ p{
   display: flex;
   flex-direction: row;
   align-content: baseline;
-  color: white;
+  color: black;
   justify-content: center;
   background-color: rgb(70, 183, 228);
   font-size: 24px;
   background-image: url('images/desktop/bar.png');
   align-items: center;
+  font-style:oblique;
   
 
 }
@@ -265,15 +266,14 @@ p{
 
 #start-menu {
   position: absolute;
-  top: 50px;
-  left: 20px;
+  top: 35px;
+  left: 40px;
   width: 200px;
-  background-color: #f0f0f0;
+  background-color: black;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   display: none;
-  background-image: url('images/desktop/bar.png');
 }
 
 #start-menu ul {
@@ -299,13 +299,15 @@ p{
 #start-button {
   margin: 0px 0; /* Reduce the top and bottom margin */
   padding: 0; /* Remove unnecessary padding */
-  align-items: center;
-  padding-left: 20px;
-  background-image: url('images/desktop/button.png');
+  align-items: left;
+  /* background-image: url('images/desktop/button.png'); */
   color: rgb(255, 255, 255);
   height: 40px;
   width: 80px;
   background-color: transparent;
+  position:absolute;
+  left:40px;
+  
 }
 
 #musicplayer {
