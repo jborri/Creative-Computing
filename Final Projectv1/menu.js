@@ -21,19 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Door 1 elements
+  // nature.exe elements
   const door1Link = document.getElementById("door1-link");
   const natureLink = document.getElementById("nature-link");
   const door1Modal = document.getElementById("door1-modal");
   const closeDoor1 = document.getElementById("close-door1");
 
-  // Door 2 elements
+  // reflect.exe elements
   const reflectLink = document.getElementById("reflect-link");
   const memesLink = document.getElementById("memes-link");
   const reflectModal = document.getElementById("reflect-modal");
   const closereflect = document.getElementById("close-reflect");
 
-  // Door 3 elements
+  // Door 3 elements gone lol
   const door3Link = document.getElementById("door3-link");
   const meLink = document.getElementById("me-link");
   const door3Modal = document.getElementById("door3-modal");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("hidden");
   };
 
-  // Door 1 event listeners
+  // nature.exe event listeners
   door1Link.addEventListener("click", (event) => {
     event.preventDefault();
     openModal(door1Modal);
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModal(door1Modal);
   });
 
-  // Door 2 event listeners
+  // reflect.exe event listeners
   reflectLink.addEventListener("click", (event) => {
     event.preventDefault();
     openModal(reflectModal);
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModal(reflectModal);
   });
 
-  // Door 3 event listeners
+  // Door 3 event listeners gone D:
   door3Link.addEventListener("click", (event) => {
     event.preventDefault();
     openModal(door3Modal);
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModal(door3Modal);
   });
 
-  // Optional: Close modal when clicking outside the content
+  // Close modal when clicking outside the content
   window.addEventListener("click", (event) => {
     if (event.target === door1Modal) {
       closeModal(door1Modal);
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lotusModal.classList.add("hidden");
   });
 
-  // Optional: Close the modal when clicking outside the modal content
+  // Close the modal when clicking outside the modal content
   window.addEventListener("click", (event) => {
     if (event.target === lotusModal) {
       lotusModal.classList.add("hidden");
@@ -265,6 +265,9 @@ specificDate.setMinutes(0);
 specificDate.setSeconds(0);
 specificDate.setMilliseconds(0);
 
+
+
+
 // Formatting dates
 const isoString = now.toISOString();
 const dateString = now.toDateString();
@@ -291,16 +294,16 @@ pastDate.setDate(now.getDate() - 3); // Subtract 3 days
 //falling pics/emojis
 
 const emojiContainer = document.querySelector('.emoji-container');
-const emojis = ['🍃', '🍃', '', '🍃', '🪻'];  // Your emojis
+const emojis = ['🍃', '🍃', '🪻', '🍃', '🪻']; 
 
 function createFallingEmoji() {
     const emoji = document.createElement('span');
     emoji.classList.add('emoji');
 
-    // Create an <img> element for the picture
+    // Create an img element for the picture
     const img = document.createElement('img');
-    img.src = 'images/desktop/flower.png'; // Replace with the path to your image
-    img.alt = 'Falling Image'; // Optional: Add alt text for accessibility
+    img.src = 'images/desktop/flower.png'; 
+    img.alt = 'Falling Image';
     img.style.width = '150px'; // Adjust the size of the image
     img.style.height = '150px';
 
@@ -326,7 +329,7 @@ function createFallingEmoji() {
     });
 }
 
-// Create a new emoji every so often (e.g. every half a second)
+// Create a new emoji every so often
 setInterval(createFallingEmoji, 1000);
 
 
@@ -340,7 +343,6 @@ document.querySelector('.submit-button').addEventListener('click', () => {
   // Clear the textarea
   textBox.value = '';
 
-  // If the text is empty, do nothing
   if (!text) return;
 
   // Create a new scrolling text element
@@ -348,13 +350,13 @@ document.querySelector('.submit-button').addEventListener('click', () => {
   newScrollingText.classList.add('scrolling-text');
   newScrollingText.textContent = text;
 
-    // Dynamically set the animation duration (e.g., based on text length)
+    // Dynamically set the animation duration
   const duration = Math.max(25, text.length / 3); // Longer text scrolls slower
   newScrollingText.style.animationDuration = `${duration}s`;
 
-  // Set a random position for the text (optional)
-  newScrollingText.style.left = '80%'; // Start off-screen to the right
-  newScrollingText.style.top = `${Math.random() * 80}%`; // Random vertical position
+  // Set a random position for the text 
+  newScrollingText.style.left = '80%'; 
+  newScrollingText.style.top = `${Math.random() * 80}%`;
 
   // Append the new text to the scrolling container
   scrollingTextContainer.appendChild(newScrollingText);

@@ -19,7 +19,7 @@
   }
 }
 
-/* Keyframe animation for clockwise rotation */
+/* animation for clockwise rotation */
 @keyframes rotateClockwise {
   from {
     transform: rotate(0deg);
@@ -29,7 +29,7 @@
   }
 }
 
-/* Keyframe animation for counterclockwise rotation */
+/* animation for counterclockwise rotation */
 @keyframes rotateCounterclockwise {
   from {
     transform: rotate(0deg);
@@ -42,12 +42,12 @@
 /* Apply clockwise rotation to smallest.png and largest.png */
 .smallest,
 .largest {
-  animation: rotateClockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+  animation: rotateClockwise 5s linear infinite; 
 }
 
 /* Apply counterclockwise rotation to middle.png */
 .middle {
-  animation: rotateCounterclockwise 5s linear infinite; /* 5 seconds per rotation, infinite loop */
+  animation: rotateCounterclockwise 5s linear infinite; 
 }
 
 
@@ -153,7 +153,6 @@ p{
 }
 
 #bar img{
-  /* border-image-repeat:stretch; */
   width: 2000px;
   align-items: center;
 }
@@ -180,9 +179,9 @@ p{
 } */
 
 .door1 {
-   position: fixed; /* Fixes the element relative to the viewport */
-  top: 35%; /* Center vertically relative to the viewport */
-  left: 20%; /* Center horizontally relative to the viewport */
+   position: fixed; 
+  top: 35%; /* Center vertically */
+  left: 20%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust to center the element exactly */
   background-color: transparent;
   display: flex;
@@ -215,9 +214,9 @@ p{
 }
 
 .reflect {
-  position: fixed; /* Fixes the element relative to the viewport */
-  top: 45%; /* Center vertically relative to the viewport */
-  left: 80%; /* Center horizontally relative to the viewport */
+  position: fixed; 
+  top: 45%; /* Center vertically */
+  left: 80%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust to center the element exactly */
   background-color: transparent;
   display: flex;
@@ -241,9 +240,9 @@ p{
 }
 
 .door3 {
-   position: fixed; /* Fixes the element relative to the viewport */
-  top: 85%; /* Center vertically relative to the viewport */
-  left: 85%; /* Center horizontally relative to the viewport */
+   position: fixed;
+  top: 85%; /* Center vertically */
+  left: 85%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust to center the element exactly */
   background-color: transparent;
   display: flex;
@@ -392,8 +391,8 @@ p{
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Limit the maximum width */
+  width: 80%;
+  max-width: 600px; 
   text-align: center;
   /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
   position: relative;
@@ -405,8 +404,8 @@ p{
   /* background-color: #c2aedc; */
   padding: 20px;
   border-radius: 8px;
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Limit the maximum width */
+  width: 80%; 
+  max-width: 600px;
   text-align: center;
   /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
   position: relative;
@@ -439,8 +438,8 @@ p{
   background-color: transparent;
   padding: 20px;
   border-radius: 8px;
-  width: 100%; /* Adjust width as needed */
-  max-width: 700px; /* Limit the maximum width */
+  width: 100%; 
+  max-width: 700px; 
   text-align: center;
   /* box-shadow: 18px -20px 8px 1px rgb(21 171 10 / 20%); */
   position: relative;
@@ -466,7 +465,7 @@ p{
 .modallotus.hidden {
   opacity: 0; /* Fully transparent */
   pointer-events: none; /* Prevent interaction when hidden */
-  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+  transition: opacity 0.5s ease;
 }
 
 /* Visible state for the modal */
@@ -630,13 +629,13 @@ pointer-events: none;
 }
 
 #lotus {
-  position: fixed; /* Fixes the element to the viewport */
-  top: 75%; /* Center vertically relative to the viewport */
-  left: 50%; /* Center horizontally relative to the viewport */
+  position: fixed; 
+  top: 75%; /* Center vertically */
+  left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust to center the element exactly */
   display: flex;
   flex-direction: column;
-  z-index: 2; /* Ensure it stays above other elements */
+  z-index: 2; 
   color: rgb(182, 169, 218);
 }
 
@@ -658,9 +657,9 @@ pointer-events: none;
 
 /* Image stack styles */
 .image-stack {
-  position: relative; /* Establishes a positioning context for child elements */
-  width: 100%; /* Adjust based on your layout */
-  height: auto; /* Adjust based on your layout */
+  position: relative; /*positioning context for child elements */
+  width: 100%; 
+  height: auto; 
   pointer-events: none;
 }
 
@@ -668,7 +667,7 @@ pointer-events: none;
   position: absolute; /* Stack images on top of each other */
   top: 0;
   left: 0;
-  width: 100%; /* Ensure both images are the same size */
+  width: 100%; 
   height: auto;
 }
 
@@ -707,16 +706,16 @@ span#current-time, #current-date{
   padding-left: 400px;
 }
 .emoji-container {
-  position: relative; /* Ensures emojis are positioned relative to this container */
+  position: relative;
   width: 100%;
-  height: 100vh; /* Covers the whole viewport height */
-  overflow: hidden; /* Prevents emojis from causing scrollbars */
+  height: 100vh; 
+  overflow: hidden; 
 }
 
 .emoji {
-    position: absolute; /* Allows individual positioning */
-    font-size: 1em; /* Adjust size as desired */
-    top: -2em; /* Start them slightly above the top of the screen */
+    position: absolute; 
+    font-size: 1em; 
+    top: -2em; 
     animation-duration: 5s;  /* Adjust animation duration */
     animation-timing-function: linear; /* Constant falling speed */
     pointer-events: none; /* Allows interaction with underlying elements */
@@ -730,10 +729,10 @@ span#current-time, #current-date{
   animation-delay: 0.5s;
 }
 .emoji:nth-child(even) {
-  animation-delay: 2s;
+  animation-delay: 1.7s;
 }
 
-/* Create a falling animation (use CSS keyframes) */
+/* Create a falling animation */
 @keyframes fall {
     to {
         transform: translateY(100vh);
@@ -741,7 +740,7 @@ span#current-time, #current-date{
 }
 
 .reflect-container {
-  position: relative; /* Establishes a positioning context for child elements */
+  position: relative; /*positioning context for child elements */
   width: 400px; /* Set the width of the container */
   height: 300px; /* Set the height of the container */
   margin: 20px auto; /* Center the container horizontally */
@@ -756,9 +755,8 @@ span#current-time, #current-date{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Make the image fill the container */
-  height: 100%; /* Make the image fill the container */
-  object-fit: cover; /* Ensure the image scales properly */
+  width: 100%; 
+  height: 100%; 
   z-index: 1; /* Place the image below the text box */
 }
 
@@ -766,14 +764,14 @@ span#current-time, #current-date{
   position: absolute;
   top: 0;
   left: 0;
-  width: 95%; /* Make the text box fill the container */
-  height: 160%; /* Make the text box fill the container */
+  width: 95%; 
+  height: 160%; 
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
   color: rgb(226, 223, 223); /* Text color */
-  border: none; /* Remove the border */
+  border: none; 
   z-index: 2; /* Place the text box above the image */
   padding: 10px; /* Add some padding inside the text box */
-  font-size: 22px; /* Adjust the font size */
+  font-size: 22px; 
   resize: none; /* Prevent resizing of the text box */
   outline: none; /* Remove the focus outline */
   overflow: auto;
@@ -782,7 +780,7 @@ span#current-time, #current-date{
   position: absolute;
   top: 0;
   left: 100%; /* Start off-screen to the right */
-  white-space: wrap; /* Prevent text from wrapping */
+  white-space: wrap; 
   font-size: 22px; /* Match the font size of the text box */
   color: rgb(226, 223, 223); /* Text color */
   z-index: 3; /* Ensure it appears above the image and text box */

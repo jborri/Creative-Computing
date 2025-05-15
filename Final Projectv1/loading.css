@@ -163,30 +163,3 @@ h1 {
   color:black;
   top: 0px
 }
-
-.scrolling-text-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%; /* Full width of the container */
-  height: 100%; /* Full height of the container */
-  overflow: hidden; /* Prevent text from overflowing */
-  z-index: 3; /* Ensure it appears above the image and text box */
-}
-
-.scrolling-text {
-  position: absolute;
-  white-space: nowrap; /* Prevent text from wrapping */
-  font-size: 22px; /* Match the font size of the text box */
-  color: rgb(226, 223, 223); /* Text color */
-  animation: scrollText 10s linear; /* Adjust duration as needed */
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateX(0); /* Start at the right edge */
-  }
-  100% {
-    transform: translateX(-100%); /* Move to the left edge */
-  }
-}

@@ -59,7 +59,7 @@ function updateTime() {
   document.getElementById('current-time').textContent = timeString;
   }
   
-setInterval(updateTime, 1000); // Update every 1000 milliseconds (1 second)
+setInterval(updateTime, 1000); // Update every 1000 milliseconds
 updateTime(); // Initial call to display time immediately
 
 document.addEventListener("DOMContentLoaded", () => {
