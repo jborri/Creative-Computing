@@ -429,8 +429,10 @@ var heat = L.heatLayer(addressPoints, {
   radius: 40, // Increase or decrease for more/less spread
   blur: 40,   // Lower blur for sharper points
   max: 2.0,   // Lower max for higher contrast 
-  gradient: {0.2: 'purple',0.4: 'green', 0.5: 'lime', 0.6: 'yellow', .8: 'red', 1.0: 'white'},
+  gradient: {0.2: 'blue',0.4: 'cyan', 0.5: "chartreuse", 0.6: 'yellow', .8: 'red', 1.0: 'white'},
   maxZoom: 1.0,
+  maxOpacity: .8,
+  minOpacity: 0.4,
 }).addTo(map);
 
 
