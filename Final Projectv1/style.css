@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap');
 
 
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   main {
@@ -610,24 +611,6 @@ pointer-events: none;
   z-index: 1;
 }
 
-/* Overlay styles */
-.overlay3 {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-
-.overlay3 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  z-index: 2;
-  position: fixed;
-  pointer-events: none;
-}
-
 #lotus {
   position: fixed; 
   top: 75%; /* Center vertically */
@@ -800,3 +783,54 @@ span#current-time, #current-date{
     transform: translateX(-100%); /* Move to the left edge */
   }
 }
+#map { 
+  height: inherit;
+      overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+    background: #ddd;
+    outline-offset: 1px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    max-width: 100%;
+    max-height: 100%;
+    touch-action: none;
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+/* Overlay styles */
+.overlay2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  position: absolute;
+}
+
+#overlaymap img{
+    max-width: 100%;
+    max-height: 100%;
+  height: auto;
+  display: block;
+  z-index: 999;
+  position: fixed;
+  pointer-events: none;
+  scale: 70%;
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  border: black 2px solid;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  position: absolute;
+
+}
+/* #map { width: 800px; height: 600px; } */
+/* body { font: 16px/1.4 "Helvetica Neue", Arial, sans-serif; }
+ .ghbtns { position: relative; top: 4px; margin-left: 5px; }
+  a { color: #0077ff; } */

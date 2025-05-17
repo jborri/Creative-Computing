@@ -7,6 +7,16 @@
     <link rel="preload" href="menu.js" as="script" />
     <meta charset="utf-8" />
     <link rel="icon" href="images/blur.gif" type="image/gif">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+          <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <script src="Leaflet.heat/dist/leaflet-heat.js"></script>
+
+<script src="/Final Projectv1/dataset.js"></script>
   </head>
   <body>
     <title>proteanpunk</title>
@@ -42,14 +52,15 @@
       <div class="doors">
           <div class="door3">
             <a href="#" id="door3-link">
-              <img src="images/desktop/Charizard.webp" alt="Door 3" class="hidden" />
+              <img src="images/desktop/Charizard.webp" alt="Door 3"/>
             </a>
-            <a href="#" id="me-link" class="hidden">Me.exe</a>
+            <a href="#" id="me-link">reduce.exe</a>
           </div>
-          <div id="musicplayer" title="Song: Because of You-LDR" style="text-align: center;">
+          
+      </div>
+      <div id="musicplayer" title="Song: Because of You-LDR" style="text-align: center;">
             <a href='#'><img src="images/desktop/beemo.png"></img></a>
           </div>
-      </div>
 </div>      
       <!-- Modal for Door 1 -->
 <div id="door1-modal" class="modal hidden">
@@ -89,7 +100,7 @@
 
     </div>
 </div>
-      <!-- Modal for Door 3 -->
+      <!-- Modal for reduce.exe -->
 <div id="door3-modal" class="modal hidden">
     <div class="modal-content">
           <span class="close-button" id="close-door3">&times;</span>
@@ -101,12 +112,8 @@
           <span id="speedValue3">1000</span> ms
         </div>
       </div>
-      <div class="overlay3">
-            <img src="images/door1/watch.png" alt="Watch" />
-      </div>
-      <div class="nature3">
-        <img id="slideshow3" src="" alt="Slideshow Image" />
-      </div>
+      <!-- <div id="overlaymap"><img src='images/blur.gif'/></div> -->
+<div id="map"></div>
     </div>
 </div>
       <!-- Modal for Lotus -->

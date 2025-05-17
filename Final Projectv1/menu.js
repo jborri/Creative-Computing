@@ -83,11 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
   door3Link.addEventListener("click", (event) => {
     event.preventDefault();
     openModal(door3Modal);
+    setTimeout(function(){ map.invalidateSize()}, 500); // Time out and refresh wheh Modal Opens
   });
 
   meLink.addEventListener("click", (event) => {
     event.preventDefault();
     openModal(door3Modal);
+    setTimeout(function(){ map.invalidateSize()}, 500); // Time out and refresh wheh Modal Opens
   });
 
   closeDoor3.addEventListener("click", () => {
@@ -409,3 +411,22 @@ document.addEventListener("DOMContentLoaded", () => {
   startSlideshow();
   cycleImages(); // Show the first image immediately
 });
+
+// Setting up Map
+var map = L.map('map').setView([40.74470993686422, -73.9580105570574], 11);
+
+var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+
+var heat = L.heatLayer(addressPoints, {
+  radius: 20, // Increase or decrease for more/less spread
+  blur: 25,   // Lower blur for sharper points
+  max: 0.7,   // Lower max for higher contrast 
+  gradient: {0.0: 'black',0.2: 'blue', 0.4: 'lime', 0.6: 'yellow', .8: 'red', 1.0: 'white'},
+  maxZoom: 2.0,
+}).addTo(map);
+
+
