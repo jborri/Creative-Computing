@@ -1,3 +1,10 @@
+// Created this dataset using ChatGPT to find the approximate latitude and longitude
+// of each borough's Community Board Center(CBC). The other variable
+// is number of noise complaints processed in the year 2019 (NYC 311 Data).
+// It's then converted into  a ratio of the CBC Area with the highest number
+// of coplaints. Each datapoint is standardized to their respective borough.
+
+
 var addressPoints = [
 [40.84358769655416, -73.91006840329302,	"0.408427877"],
 [40.83323537417602, -73.89674271216523,	"0.285251216"],
