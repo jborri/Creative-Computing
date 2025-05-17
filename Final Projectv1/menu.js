@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closereflect = document.getElementById("close-reflect");
 
   // Door 3 elements gone lol
-  const door3Link = document.getElementById("door3-link");
+  const escapeLink = document.getElementById("escape-link");
   const meLink = document.getElementById("me-link");
-  const door3Modal = document.getElementById("door3-modal");
-  const closeDoor3 = document.getElementById("close-door3");
+  const escapeModal = document.getElementById("escape-modal");
+  const closeescape = document.getElementById("close-escape");
 
   // Function to open a modal
   const openModal = (modal) => {
@@ -80,20 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Door 3 event listeners gone D:
-  door3Link.addEventListener("click", (event) => {
+  escapeLink.addEventListener("click", (event) => {
     event.preventDefault();
-    openModal(door3Modal);
+    openModal(escapeModal);
     setTimeout(function(){ map.invalidateSize()}, 500); // Time out and refresh wheh Modal Opens
   });
 
   meLink.addEventListener("click", (event) => {
     event.preventDefault();
-    openModal(door3Modal);
+    openModal(escapeModal);
     setTimeout(function(){ map.invalidateSize()}, 500); // Time out and refresh wheh Modal Opens
   });
 
-  closeDoor3.addEventListener("click", () => {
-    closeModal(door3Modal);
+  closeescape.addEventListener("click", () => {
+    closeModal(escapeModal);
   });
 
   // Close modal when clicking outside the content
@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.target === reflectModal) {
       closeModal(reflectModal);
     }
-    if (event.target === door3Modal) {
-      closeModal(door3Modal);
+    if (event.target === escapeModal) {
+      closeModal(escapeModal);
     }
   });
 
@@ -413,7 +413,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Setting up Map
-var map = L.map('map').setView([40.74470993686422, -73.9580105570574], 11);
+
+var map = L.map('map', {
+    minZoom: 10,
+    maxZoom: 13,
+}).setView([40.74470993686422, -73.9580105570574], 10);
 
 var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
@@ -422,11 +426,11 @@ var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
 
 var heat = L.heatLayer(addressPoints, {
-  radius: 20, // Increase or decrease for more/less spread
-  blur: 25,   // Lower blur for sharper points
-  max: 0.7,   // Lower max for higher contrast 
-  gradient: {0.0: 'black',0.2: 'blue', 0.4: 'lime', 0.6: 'yellow', .8: 'red', 1.0: 'white'},
-  maxZoom: 2.0,
+  radius: 40, // Increase or decrease for more/less spread
+  blur: 40,   // Lower blur for sharper points
+  max: 2.0,   // Lower max for higher contrast 
+  gradient: {0.2: 'purple',0.4: 'green', 0.5: 'lime', 0.6: 'yellow', .8: 'red', 1.0: 'white'},
+  maxZoom: 1.0,
 }).addTo(map);
 
 
