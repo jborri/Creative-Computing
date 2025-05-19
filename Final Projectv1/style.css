@@ -104,7 +104,7 @@ body, html {
 
 h1 {
   font-size: 24px;
-  margin: 0;
+  margin: 0px;
   text-align: center;
   background-color: rgb(151, 208, 230);
   display: flex;
@@ -115,15 +115,16 @@ h1 {
   width: 100px;
   align-items: center;
   align-content: center; 
+  padding-bottom: 0px;
+  margin-block-start: 0px;
 }
 
-p{
+p {
     font-size: 20px;
     font-weight: bold;
     color: #d19797;
     text-align: center;
-    margin: 0 60px 0;;
-    margin-bottom: 20px;
+    margin: 0px 0px 0px 0;
 }
 
 #desktop {
@@ -249,12 +250,13 @@ p{
   background-color: transparent;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   color: green;
   flex-wrap: wrap;
   width: 150px; /* Adjust width */
   height: 150px; /* Adjust height */
+  
 }
 
 .escape img{
@@ -478,8 +480,8 @@ p{
 
 .close-button {
   position: absolute;
-  /* top: 10px;
-  right: 10px; */
+  top: 0px;
+  /* right: 10px; */
   font-size: 24px;
   cursor: pointer;
 }
