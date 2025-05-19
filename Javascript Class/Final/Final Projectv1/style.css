@@ -264,6 +264,10 @@ p {
   height: 150px;
 }
 
+.escape:hover img{
+   background: radial-gradient(circle, rgb(248, 248, 209) 0%, transparent 75%);
+}
+
 .escape a{
   color: white;
 }
