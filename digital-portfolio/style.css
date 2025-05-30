@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Workbench:SCAN@-53&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  
+}
+.container {
+  background: red;
+}
+
+canvas {
+  display: block;
+}
+
+.me {
+  color:red;
+}
+
+#about {
+  margin:50px;
+  padding: 25px;
+}
+
+#about, #skills {
+  font-family: "Jim Nightshade";
+  color: gold;
+  border: solid 1px #000000;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 25px;
+  text-align: center;
+  background-image: url("images/sparkle2.gif");
+}
+
+h1{
+  font-family: "Jim Nightshade";
+  margin: 50px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+#about:hover, #skills:hover {
+  /* background-color: #8bad9b; */
+  background-image: url("images/void.gif");
+  color: #ffffff;
+}
+#background {
+    /* background-image: image("images/sparkle.gif"); */
+    background-image: url("images/sparkle.gif");
+    background-size: cover;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-content: center;
+}
+
+#welcome {
+  z-index: 1000;
+  pointer-events: none; /* Allows interaction with underlying elements */
+}
+
+#links {
+    font-family: "Jim Nightshade";
+  margin: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  align-items: center;
+}
+
