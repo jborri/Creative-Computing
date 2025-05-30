@@ -18,12 +18,21 @@ canvas {
   color:red;
 }
 
-#about {
+#poems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+}
+
+#poem1 {
   margin:50px;
   padding: 25px;
 }
 
-#about, #skills {
+#poem1, #poem2 {
   font-family: "Jim Nightshade";
   color: gold;
   border: solid 1px #000000;
@@ -32,25 +41,59 @@ canvas {
   padding: 25px;
   text-align: center;
   background-image: url("images/sparkle2.gif");
+  height: 400px;
+  width: 400px;
+  scroll-behavior: smooth;
+  overflow: auto;
+  
+  
+}
+
+#poem1s {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 95%; 
+  height: 160%;  */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: rgb(226, 223, 223); /* Text color */
+  border: none; 
+  z-index: 2; /* Place the text box above the image */
+  padding: 10px; /* Add some padding inside the text box */
+  font-size: 22px; 
+  resize: none; /* Prevent resizing of the text box */
+  outline: none; /* Remove the focus outline */
+  overflow: auto;
 }
 
 h1{
   font-family: "Jim Nightshade";
   margin: 50px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 56px;
 }
 
-#about:hover, #skills:hover {
-  /* background-color: #8bad9b; */
-  background-image: url("images/void.gif");
-  color: #ffffff;
+a:hover{
+  color: yellow;
+}
+
+a {
+  color: mediumorchid;
+}
+
+#poem1:hover, #poem2:hover {
+  background-color: #8bad9b transparent 40%;
+  /* background-image: url("images/void.gif"); */
+  background-image: none;
+  color: black;
 }
 #background {
     /* background-image: image("images/sparkle.gif"); */
-    background-image: url("images/sparkle.gif");
+    background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
     background-size: cover;
 }
+
+
 
 #header {
   display: flex;
@@ -59,9 +102,11 @@ h1{
   align-content: center;
 }
 
-#welcome {
+#welcome #scrolly {
   z-index: 1000;
   pointer-events: none; /* Allows interaction with underlying elements */
+  width: auto;
+  height:auto;
 }
 
 #links {
@@ -69,6 +114,13 @@ h1{
   margin: 50px;
   font-weight: 700;
   font-size: 36px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  align-content: center;
 }
-
+marquee {
+  pointer-events: none; /* Allows interaction with underlying elements */
+  width: 100%;
+  height: 100%;
+}
