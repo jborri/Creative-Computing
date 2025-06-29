@@ -11,7 +11,7 @@
       startMenu.classList.add("hidden");
       startMenu.style.display = "none";
     }
-    console.log("did it work?")
+  
   });
 
   // Close the menu if clicked outside?
@@ -19,4 +19,6 @@
     if (!startButton.contains(event.target) && !startMenu.contains(event.target)) {
       startMenu.classList.add("hidden");
       startMenu.style.display = "none";
-    }});
+       console.log("did it work?")
+    }
+  });

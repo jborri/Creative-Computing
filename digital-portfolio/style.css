@@ -162,9 +162,9 @@ a {
   /* display: flex; */
   align-items: flex-start;
   flex-direction: row-reverse;
- 
   /* flex-wrap: wrap; */
   justify-content: flex-start;
+ 
 }
 
 #titles {
@@ -203,6 +203,8 @@ span {
   align-content: center;
   justify-content: center;
   align-items: stretch;
+  height: auto;
+  width: auto;
 }
 
 .hidden {
