@@ -4,13 +4,15 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: auto;
-  height: 100%;
+  background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
+  background-repeat:repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #2b96ed; /* Fallback color */
 }
 
 main {
-  width: auto;
-  height: 100%;
+
 }
 
 
@@ -84,8 +86,11 @@ a {
   color: black;
 }
 #background {
-    background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
+    /* background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
+    background-repeat:repeat;
     background-size: cover;
+    background-position: center center;
+    background-color: #089bdf;  */
 }
 
 #links {
