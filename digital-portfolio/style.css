@@ -4,15 +4,21 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
-  background-repeat:repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: #2b96ed; /* Fallback color */
+    background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color: #089bdf; 
+   
 }
 
-main {
 
+main {
+    background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #089bdf; 
 }
 
 
@@ -86,11 +92,7 @@ a {
   color: black;
 }
 #background {
-    /* background-image: url("https://i.pinimg.com/originals/8b/0a/29/8b0a294427c34da933fe69452075e97c.gif");
-    background-repeat:repeat;
-    background-size: cover;
-    background-position: center center;
-    background-color: #089bdf;  */
+  width: 100%;
 }
 
 #links {
@@ -132,6 +134,7 @@ a {
   pointer-events: none; /* Allows interaction with underlying elements */
   width: auto;
   height:auto;
+  overflow:hidden;
 }
 
  #names {
