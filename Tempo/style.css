@@ -11,3 +11,37 @@ html, body {
 .hidden {
   display: none;
 }
+#link_container{
+  border: #2a4e5f 1px solid;
+  width: 25%;
+  
+}
+#titles {
+display: flex;
+flex-direction: column;
+align-items: start;
+}
+
+#links {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: start;
+
+}
+
+#column1 {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+#column1 a {
+  padding: 5px;
+}
+#column2 {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+#column2 a {
+  padding: 5px;
